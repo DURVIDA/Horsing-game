@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://83vxjp4i6efd"
+path="res://.godot/imported/Hilly_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-16e07f76417e1532407768cb1f10365e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-16e07f76417e1532407768cb1f10365e.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Hilly_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-16e07f76417e1532407768cb1f10365e.mesh", "res://.godot/imported/Hilly_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-16e07f76417e1532407768cb1f10365e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

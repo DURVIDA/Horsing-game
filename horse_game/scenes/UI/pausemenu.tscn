@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/UI/pausemenu.gd" id="1_rto66"]
 [ext_resource type="Shader" path="res://scenes/UI/pausemenu.gdshader" id="2_w5ptn"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/Shooting Star.ttf" id="3_y3add"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="3_hro73"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7d2d"]
 shader = ExtResource("2_w5ptn")
@@ -91,10 +91,10 @@ offset_bottom = 715.0
 [node name="PanelContainer" type="PanelContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 364.0
-offset_top = 289.0
-offset_right = 818.0
-offset_bottom = 447.0
+offset_left = 401.0
+offset_top = 138.0
+offset_right = 855.0
+offset_bottom = 393.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -102,19 +102,19 @@ theme_override_constants/separation = 15
 
 [node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_y3add")
+theme_override_fonts/font = ExtResource("3_hro73")
 theme_override_font_sizes/font_size = 30
 text = "Resume"
 
 [node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_y3add")
+theme_override_fonts/font = ExtResource("3_hro73")
 theme_override_font_sizes/font_size = 30
 text = "Reload last checkpoint"
 
 [node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_y3add")
+theme_override_fonts/font = ExtResource("3_hro73")
 theme_override_font_sizes/font_size = 30
 text = "Quit and Save"
 

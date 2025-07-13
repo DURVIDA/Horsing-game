@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bi65yetlogidt"
+path="res://.godot/imported/Hilly_Terrain_Hill_Side_Sharp.obj-4210b96630da28e1db4d13cc3ec67e01.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Hill_Side_Sharp.obj-4210b96630da28e1db4d13cc3ec67e01.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Hilly_Terrain_Hill_Side_Sharp.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Hill_Side_Sharp.obj-4210b96630da28e1db4d13cc3ec67e01.mesh", "res://.godot/imported/Hilly_Terrain_Hill_Side_Sharp.obj-4210b96630da28e1db4d13cc3ec67e01.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3ps1pb8dmvsm"
+path="res://.godot/imported/Beach_Prop_Treasure_Chest.obj-cfe559f15f17d5097302cb14541860bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Beach_Prop_Treasure_Chest.obj-cfe559f15f17d5097302cb14541860bb.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Beach_Prop_Treasure_Chest.obj"
+dest_files=["res://.godot/imported/Beach_Prop_Treasure_Chest.obj-cfe559f15f17d5097302cb14541860bb.mesh", "res://.godot/imported/Beach_Prop_Treasure_Chest.obj-cfe559f15f17d5097302cb14541860bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -2,6 +2,9 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+var slot = Gamestate.slot
+var money = Gamestate.money
+var food = Gamestate.food
 
 func _ready() -> void:
 	animation_player.play("RESET")
@@ -33,9 +36,9 @@ func _on_restart_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	SaveManager.save_game({
-	"slot" : Gamestate.slot,
-	"food": Gamestate.food,
-	"money": Gamestate.money,
+	"slot" : slot,
+	"food": food,
+	"money": money,
 	})
 	resume()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

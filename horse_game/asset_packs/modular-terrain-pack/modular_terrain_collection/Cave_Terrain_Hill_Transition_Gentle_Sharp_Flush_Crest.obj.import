@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjh7g1snahrli"
+path="res://.godot/imported/Cave_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-2a9a9c8a506aacd647728d820a3f9c45.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-2a9a9c8a506aacd647728d820a3f9c45.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Cave_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj"
+dest_files=["res://.godot/imported/Cave_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-2a9a9c8a506aacd647728d820a3f9c45.mesh", "res://.godot/imported/Cave_Terrain_Hill_Transition_Gentle_Sharp_Flush_Crest.obj-2a9a9c8a506aacd647728d820a3f9c45.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

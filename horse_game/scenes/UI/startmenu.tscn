@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://4x4hb41ykusj"]
 
 [ext_resource type="Script" path="res://scenes/UI/startmenu.gd" id="1_u7is3"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/Shooting Star.ttf" id="2_eqjdv"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="2_rjmn2"]
 
 [node name="Startmenu" type="Control"]
 layout_mode = 3
@@ -22,19 +22,19 @@ theme_override_constants/separation = 30
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_eqjdv")
+theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
 text = "Start"
 
 [node name="Resume" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_eqjdv")
+theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
 text = "Continue"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_eqjdv")
+theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
 text = "Quit
 "

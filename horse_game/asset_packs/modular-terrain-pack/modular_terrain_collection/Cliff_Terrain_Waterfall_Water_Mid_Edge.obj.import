@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bk1bhoe4ru3ue"
+path="res://.godot/imported/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj-7e4a3cf00bc2d30e941ceaecc19dcb87.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj-7e4a3cf00bc2d30e941ceaecc19dcb87.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj"
+dest_files=["res://.godot/imported/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj-7e4a3cf00bc2d30e941ceaecc19dcb87.mesh", "res://.godot/imported/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj-7e4a3cf00bc2d30e941ceaecc19dcb87.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

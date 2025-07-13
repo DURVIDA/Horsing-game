@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bltya2gj0ortb"
+path="res://.godot/imported/Hilly_Prop_Fence_Gate_2.obj-c42dd594d20518f1a5a1877bb0ad4e40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Fence_Gate_2.obj-c42dd594d20518f1a5a1877bb0ad4e40.mesh"]
+
+source_file="res://asset_packs/modular-terrain-pack/modular_terrain_collection/Hilly_Prop_Fence_Gate_2.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Fence_Gate_2.obj-c42dd594d20518f1a5a1877bb0ad4e40.mesh", "res://.godot/imported/Hilly_Prop_Fence_Gate_2.obj-c42dd594d20518f1a5a1877bb0ad4e40.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

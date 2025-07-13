@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtsofhwl8ymys"]
 
 [ext_resource type="Script" path="res://scenes/UI/savemenu.gd" id="1_bj4q7"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/Shooting Star.ttf" id="2_3hb5p"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="2_e3umi"]
 
 [node name="Savemenu" type="Control"]
 layout_mode = 3
@@ -21,19 +21,19 @@ offset_bottom = 385.0
 
 [node name="Slot 1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 1"
 
 [node name="Slot 2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 2"
 
 [node name="Slot 3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 3"
 
