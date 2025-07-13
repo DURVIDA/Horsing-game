@@ -3,8 +3,7 @@ extends Control
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var slot = Gamestate.slot
-var money = Gamestate.money
-var food = Gamestate.food
+
 
 func _ready() -> void:
 	animation_player.play("RESET")
@@ -35,11 +34,11 @@ func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed() -> void:
-	SaveManager.save_game({
-	"slot" : slot,
-	"food": food,
-	"money": money,
-	})
+	var current_data = {
+	"money": Gamestate.money,
+	"food": Gamestate.food
+}
+	SaveManager.save_game(current_data)
 	resume()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene_to_file("res://scenes/UI/startmenu.tscn")

@@ -12,8 +12,6 @@ const JUMP_VELOCITY = 4.5
 @export var sens := 0.5
 
 var current_interactable: Node = null
-var food = Gamestate.food
-var money = Gamestate.money
 var speed = WALK_SPEED
 
 func _ready() -> void:
@@ -21,8 +19,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	%Money2.text = str(money)
-	%Food2.text = str(food)
+	%Money2.text = str(Gamestate.money)
+	%Food2.text = str(Gamestate.food)
 	
 	var horizontal_velocity = velocity
 	horizontal_velocity.y = 0
@@ -80,15 +78,15 @@ func _on_interaction_area_area_exited(body: Node3D) -> void:
 		current_interactable = null
 		
 func add_food(amount: int) -> void:
-	food += amount
-	print("🍎 Food collected: ", food)
+	Gamestate.food += amount
+	print("🍎 Food collected: ", Gamestate.food)
 	
 func sell_food() -> void:
-	if food > 0:
+	if Gamestate.food > 0:
 		var earnings = 10
-		money += earnings
-		food -=1
-		print("💰 Food sold! Money: ", money)
+		Gamestate.money += earnings
+		Gamestate.food -=1
+		print("💰 Food sold! Money: ", Gamestate.money)
 	else:
 		print("❌ No food to sell.")
 		

@@ -3,34 +3,32 @@ extends Node
 # Number of save slots
 const SAVE_SLOT_COUNT = 3
 
-var slot = Gamestate.slot
-var money = Gamestate.money
-var food = Gamestate.food
+
 # Save file prefix
 const SAVE_PATH := "user://save_slot_"
 
 func save_game(data: Dictionary) -> void:
-	if slot < 1 or slot > SAVE_SLOT_COUNT:
-		push_error("Invalid save slot: %d" % slot)
+	if Gamestate.slot < 1 or Gamestate.slot > SAVE_SLOT_COUNT:
+		push_error("Invalid save slot: %d" % Gamestate.slot)
 		return
 	
-	var file_path = "%s%d.json" % [SAVE_PATH, slot]
+	var file_path = "%s%d.json" % [SAVE_PATH, Gamestate.slot]
 	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
 	file.close()
-	print("✅ Game saved to slot %d" % slot, money, food)
+	print("✅ Game saved to slot %d" % Gamestate.slot, Gamestate.money, Gamestate.food)
 
 
-func load_game(_slott: int) -> Dictionary:
-	_slott = slot
-	if _slott < 1 or _slott > SAVE_SLOT_COUNT:
-		push_error("Invalid load slot: %d" % _slott)
+func load_game(slot: int) -> Dictionary:
+	slot = Gamestate.slot
+	if slot < 1 or slot > SAVE_SLOT_COUNT:
+		push_error("Invalid load slot: %d" % Gamestate.slot)
 		return {}
 	
-	var file_path = "%s%d.json" % [SAVE_PATH, _slott]
+	var file_path = "%s%d.json" % [SAVE_PATH, Gamestate.slot]
 	
 	if not FileAccess.file_exists(file_path):
-		print("❌ No save file in slot %d" % _slott)
+		print("❌ No save file in slot %d" % Gamestate.slot)
 		return {}
 
 	var file = FileAccess.open(file_path, FileAccess.READ)
