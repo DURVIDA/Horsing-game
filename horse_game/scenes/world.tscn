@@ -1,0 +1,231 @@
+[gd_scene load_steps=23 format=3 uid="uid://bvjh1pw87l7sy"]
+
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_5owun"]
+[ext_resource type="PackedScene" uid="uid://cs45255q38myj" path="res://scenes/buiding_blocks/floor.tscn" id="1_rlnx4"]
+[ext_resource type="PackedScene" uid="uid://bgtig5kfl2g4" path="res://scenes/player/player.tscn" id="2_t33xv"]
+[ext_resource type="Texture2D" uid="uid://bx4lqei3wmjcc" path="res://assets/grass_grass_0118_02_tiled_s.jpg" id="3_5lr15"]
+[ext_resource type="PackedScene" uid="uid://6curo0es7374" path="res://scenes/buiding_blocks/wall.tscn" id="3_p2m77"]
+[ext_resource type="PackedScene" uid="uid://csrndr13v6rko" path="res://scenes/buiding_blocks/stall.tscn" id="4_j065x"]
+[ext_resource type="PackedScene" uid="uid://bkgwvvsr4tfyk" path="res://scenes/buiding_blocks/door.tscn" id="7_hx20h"]
+[ext_resource type="PackedScene" uid="uid://ccfobxkf74m1p" path="res://scenes/animals/horse.tscn" id="7_orhbr"]
+[ext_resource type="PackedScene" uid="uid://bw2w8pisvtqe7" path="res://scenes/UI/pausemenu.tscn" id="8_asj4k"]
+[ext_resource type="PackedScene" uid="uid://d2messd7kiiav" path="res://scenes/buiding_blocks/plants/tree.tscn" id="9_q5eeo"]
+[ext_resource type="PackedScene" uid="uid://b25ucyka7b5aq" path="res://scenes/buiding_blocks/plants/rock.tscn" id="10_ecrcm"]
+[ext_resource type="PackedScene" uid="uid://brrlmpvcnidv" path="res://scenes/buiding_blocks/plants/bush.tscn" id="10_lhjqw"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="12_mqq4y"]
+[ext_resource type="Resource" path="res://terrain/data.hterrain" id="13_kwqra"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="14_k1j1b"]
+[ext_resource type="PackedScene" uid="uid://cgs2iqpv75bdq" path="res://scenes/buiding_blocks/sky.tscn" id="15_c0k6f"]
+[ext_resource type="PackedScene" uid="uid://cdo00h002x02" path="res://scenes/buiding_blocks/food_place.tscn" id="16_8ybxa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8jl0"]
+albedo_texture = ExtResource("3_5lr15")
+uv1_scale = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_ko38r"]
+script = ExtResource("14_k1j1b")
+mode = 0
+textures = [[], []]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_buret"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_q27w5"]
+sky_material = SubResource("ProceduralSkyMaterial_buret")
+
+[sub_resource type="Environment" id="Environment_vb72v"]
+background_mode = 2
+sky = SubResource("Sky_q27w5")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="world" type="Node3D"]
+script = ExtResource("1_5owun")
+
+[node name="Player" parent="." instance=ExtResource("2_t33xv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.848, 0, 14.5903)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pausemenu" parent="CanvasLayer" instance=ExtResource("8_asj4k")]
+z_index = -2
+
+[node name="floors" type="Node3D" parent="."]
+
+[node name="ground" parent="floors" instance=ExtResource("1_rlnx4")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0, 0)
+visible = false
+
+[node name="MeshInstance3D" parent="floors/ground" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_k8jl0")
+
+[node name="rightroof" parent="floors" instance=ExtResource("1_rlnx4")]
+transform = Transform3D(20, 0, 0, 0, 0.906308, -4.22618, 0, 0.422618, 9.06308, 0, 14, 22)
+
+[node name="leftroof" parent="floors" instance=ExtResource("1_rlnx4")]
+transform = Transform3D(20, 0, 0, 0, 0.906308, 4.22618, 0, -0.422618, 9.06308, 0, 14, 8)
+
+[node name="walls" type="Node3D" parent="."]
+
+[node name="leftwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="rightwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="backwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(-1.31134e-07, 0, 1, 0, 2, 0, -3, 0, -4.37114e-08, 20, 0, 15)
+
+[node name="fronttopwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(-8.74228e-08, 0, 1, 0, 0.7, 0, -2, 0, -4.37114e-08, -20, 10, 15)
+
+[node name="frontleftwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(-6.33815e-08, 0, 1, 0, 2, 0, -1.45, 0, -4.37114e-08, -20, 0, 7)
+
+[node name="frontdoortopwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(-2.18557e-08, 0, 1, 0, 1, 0, -0.5, 0, -4.37114e-08, -20, 5, 15)
+
+[node name="frontrightwall" parent="walls" instance=ExtResource("3_p2m77")]
+transform = Transform3D(-6.33815e-08, 0, 1, 0, 2, 0, -1.45, 0, -4.37114e-08, -20, 0, 23)
+
+[node name="lights" type="Node3D" parent="."]
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 15)
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="stalls" type="Node3D" parent="."]
+
+[node name="Stall" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16, 0, 5)
+
+[node name="Stall2" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8, 0, 5)
+
+[node name="Stall3" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 5)
+
+[node name="Stall4" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8, 0, 5)
+
+[node name="Stall5" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -8, 0, 25)
+
+[node name="Stall6" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 25)
+
+[node name="Stall7" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 8, 0, 25)
+
+[node name="Stall8" parent="stalls" instance=ExtResource("4_j065x")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 16, 0, 25)
+
+[node name="animals" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781407, 16.7473)
+
+[node name="horse" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 0, 8)
+
+[node name="horse2" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 0, 7)
+
+[node name="horse3" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 0, 7)
+
+[node name="horse4" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 7)
+
+[node name="horse5" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10)
+
+[node name="horse6" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10)
+
+[node name="horse7" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10)
+
+[node name="horse8" parent="animals" instance=ExtResource("7_orhbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="Door" parent="." instance=ExtResource("7_hx20h")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -20, 0, 15)
+
+[node name="plants" type="Node3D" parent="."]
+
+[node name="Trees" type="Node3D" parent="plants"]
+
+[node name="Tree" parent="plants/Trees" instance=ExtResource("9_q5eeo")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -32.4668, 0.3, 0)
+
+[node name="Tree2" parent="plants/Trees" instance=ExtResource("9_q5eeo")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.9773, 0.3, 27.0634)
+
+[node name="Tree3" parent="plants/Trees" instance=ExtResource("9_q5eeo")]
+transform = Transform3D(-0.479474, 0, -1.94168, 0, 2, 0, 1.94168, 0, -0.479474, -15.3746, 0.3, -6.9687)
+
+[node name="Tree4" parent="plants/Trees" instance=ExtResource("9_q5eeo")]
+transform = Transform3D(-0.479474, 0, -1.94168, 0, 2, 0, 1.94168, 0, -0.479474, -29.5285, 0.3, 32.7303)
+
+[node name="Rocks" type="Node3D" parent="plants"]
+
+[node name="Rock" parent="plants/Rocks" instance=ExtResource("10_ecrcm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -39.053, 0.5, 39.6344)
+
+[node name="Rock2" parent="plants/Rocks" instance=ExtResource("10_ecrcm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26.6483, 0.5, -0.421237)
+
+[node name="Rock3" parent="plants/Rocks" instance=ExtResource("10_ecrcm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24.6979, 0.60272, 27.9056)
+
+[node name="Bushes" type="Node3D" parent="plants"]
+
+[node name="Bush" parent="plants/Bushes" instance=ExtResource("10_lhjqw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -39.528, 0.5, 36.5296)
+
+[node name="Bush2" parent="plants/Bushes" instance=ExtResource("10_lhjqw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.6912, 0.5, 21.6399)
+
+[node name="Bush3" parent="plants/Bushes" instance=ExtResource("10_lhjqw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.503, 0.5, -3.65471)
+
+[node name="worldstuff" type="Node3D" parent="."]
+
+[node name="sky" parent="worldstuff" instance=ExtResource("15_c0k6f")]
+transform = Transform3D(40, 0, 0, 0, 2, 0, 0, 0, 40, 0, 170, 0)
+
+[node name="HTerrain" type="Node3D" parent="worldstuff"]
+script = ExtResource("12_mqq4y")
+map_scale = Vector3(5, 1, 5)
+centered = true
+_terrain_data = ExtResource("13_kwqra")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 2
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_ko38r")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="worldstuff"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="worldstuff"]
+environment = SubResource("Environment_vb72v")
+
+[node name="food_place" parent="." instance=ExtResource("16_8ybxa")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15, 1.5, 28.5)
+
+[editable path="floors/ground"]

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://do6xqar2nwq6p"
+path="res://.godot/imported/Tree_Bare_1_A_Color1.obj-388148a196587858a3cedbab98f18ddc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tree_Bare_1_A_Color1.obj-388148a196587858a3cedbab98f18ddc.mesh"]
+
+source_file="res://asset_packs/kaykit-forest/KayKit_Forest_Nature_Pack_1.0_FREE/Assets/obj/Tree_Bare_1_A_Color1.obj"
+dest_files=["res://.godot/imported/Tree_Bare_1_A_Color1.obj-388148a196587858a3cedbab98f18ddc.mesh", "res://.godot/imported/Tree_Bare_1_A_Color1.obj-388148a196587858a3cedbab98f18ddc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

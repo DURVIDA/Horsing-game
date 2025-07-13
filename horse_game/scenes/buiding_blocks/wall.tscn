@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://6curo0es7374"]
+
+[ext_resource type="Texture2D" uid="uid://bbnqnju61ci0j" path="res://assets/wood_planks_old_0016_01_s.jpg" id="1_7hamy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bhlb0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hobr5"]
+albedo_texture = ExtResource("1_7hamy")
+uv1_scale = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bgha7"]
+
+[node name="wall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 2.5, 0)
+mesh = SubResource("BoxMesh_bhlb0")
+surface_material_override/0 = SubResource("StandardMaterial3D_hobr5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_bgha7")

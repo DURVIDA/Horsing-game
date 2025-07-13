@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvp4ewwaq1u6c"
+path="res://.godot/imported/Grass_2_SingleSided_Mesh.obj-323e27cd06f0d0349dc2d37f2cf439bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grass_2_SingleSided_Mesh.obj-323e27cd06f0d0349dc2d37f2cf439bd.mesh"]
+
+source_file="res://asset_packs/kaykit-forest/KayKit_Forest_Nature_Pack_1.0_FREE/Assets/obj/Grass_2_SingleSided_Mesh.obj"
+dest_files=["res://.godot/imported/Grass_2_SingleSided_Mesh.obj-323e27cd06f0d0349dc2d37f2cf439bd.mesh", "res://.godot/imported/Grass_2_SingleSided_Mesh.obj-323e27cd06f0d0349dc2d37f2cf439bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

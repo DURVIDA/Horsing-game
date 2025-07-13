@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csvkhmp4c1ukq"
+path="res://.godot/imported/Zebra.obj-5868efa7886b35121e8eda90f721d1c3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Zebra.obj-5868efa7886b35121e8eda90f721d1c3.mesh"]
+
+source_file="res://asset_packs/lowpoly-animated-animals/OBJ/Zebra.obj"
+dest_files=["res://.godot/imported/Zebra.obj-5868efa7886b35121e8eda90f721d1c3.mesh", "res://.godot/imported/Zebra.obj-5868efa7886b35121e8eda90f721d1c3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

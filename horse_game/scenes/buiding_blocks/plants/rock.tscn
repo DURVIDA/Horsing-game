@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b25ucyka7b5aq"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmwp0fpmeiimp" path="res://asset_packs/kaykit-forest/KayKit_Forest_Nature_Pack_1.0_FREE/Assets/obj/Rock_1_A_Color1.obj" id="1_ptaeh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dksho"]
+
+[node name="Rock" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ptaeh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_dksho")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccfobxkf74m1p"]
+
+[ext_resource type="ArrayMesh" uid="uid://2hl1sb6upvyr" path="res://asset_packs/lowpoly-animated-animals/OBJ/Horse.obj" id="1_h7qcd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfltu"]
+albedo_color = Color(0.656962, 0.31914, 0.104206, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ow23a"]
+
+[node name="horse" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+layers = 7
+mesh = ExtResource("1_h7qcd")
+surface_material_override/0 = SubResource("StandardMaterial3D_hfltu")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 4, 0, 2, 0.6)
+shape = SubResource("CapsuleShape3D_ow23a")

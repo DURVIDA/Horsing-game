@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkgwvvsr4tfyk"]
+
+[ext_resource type="Script" path="res://scenes/buiding_blocks/door.gd" id="1_6dhdt"]
+[ext_resource type="PackedScene" uid="uid://dq3qg0k1ixun0" path="res://asset_packs/medieval-wooden-door/Door.glb" id="1_bywj6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqg8m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ym6d"]
+
+[node name="Door" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Door" parent="." instance=ExtResource("1_bywj6")]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_6dhdt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 0, 2, 0.1)
+shape = SubResource("BoxShape3D_pqg8m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 0.4, 0, 2, 0.2)
+shape = SubResource("BoxShape3D_2ym6d")

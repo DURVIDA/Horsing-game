@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://brrlmpvcnidv"]
+
+[ext_resource type="ArrayMesh" uid="uid://chijubh0m6hms" path="res://asset_packs/kaykit-forest/KayKit_Forest_Nature_Pack_1.0_FREE/Assets/obj/Bush_2_B_Color1.obj" id="1_fux21"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47q6s"]
+
+[node name="Bush" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_fux21")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_47q6s")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdo00h002x02"]
+
+[ext_resource type="Script" path="res://scenes/buiding_blocks/food_place.gd" id="1_e08b6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7bdji"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1xk4"]
+albedo_color = Color(0.652693, 0.398863, 0.0806311, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfvs4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mwj3"]
+
+[node name="food_place" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_7bdji")
+surface_material_override/0 = SubResource("StandardMaterial3D_o1xk4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_cfvs4")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_e08b6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0.5)
+shape = SubResource("BoxShape3D_8mwj3")

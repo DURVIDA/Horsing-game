@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtsofhwl8ymys"]
+
+[ext_resource type="Script" path="res://scenes/UI/savemenu.gd" id="1_bj4q7"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/Shooting Star.ttf" id="2_3hb5p"]
+
+[node name="Savemenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bj4q7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 245.0
+offset_right = 811.0
+offset_bottom = 385.0
+
+[node name="Slot 1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 1"
+
+[node name="Slot 2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 2"
+
+[node name="Slot 3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3hb5p")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 3"
+
+[connection signal="pressed" from="VBoxContainer/Slot 1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot 2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot 3" to="." method="_on_slot_3_pressed"]
