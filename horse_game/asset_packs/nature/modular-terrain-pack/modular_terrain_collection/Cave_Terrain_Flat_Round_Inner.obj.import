@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvjihtfu7mh6x"
+path="res://.godot/imported/Cave_Terrain_Flat_Round_Inner.obj-59156ac5bcbae0942599349fe36e4a73.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Terrain_Flat_Round_Inner.obj-59156ac5bcbae0942599349fe36e4a73.mesh"]
+
+source_file="res://asset_packs/nature/modular-terrain-pack/modular_terrain_collection/Cave_Terrain_Flat_Round_Inner.obj"
+dest_files=["res://.godot/imported/Cave_Terrain_Flat_Round_Inner.obj-59156ac5bcbae0942599349fe36e4a73.mesh", "res://.godot/imported/Cave_Terrain_Flat_Round_Inner.obj-59156ac5bcbae0942599349fe36e4a73.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

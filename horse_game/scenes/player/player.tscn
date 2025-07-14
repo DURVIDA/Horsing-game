@@ -1,12 +1,13 @@
-[gd_scene load_steps=19 format=4 uid="uid://d2ao018bm0eg7"]
+[gd_scene load_steps=20 format=4 uid="uid://d2ao018bm0eg7"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_acrtt"]
 [ext_resource type="Texture2D" uid="uid://4360mfhshfhe" path="res://scenes/player/untitled_Peasant_Man_diffuse.png" id="1_itxjg"]
 [ext_resource type="Texture2D" uid="uid://1rfroij8v0lu" path="res://scenes/player/untitled_Peasant_Man_normal.png" id="2_v1xy7"]
 [ext_resource type="AudioStream" uid="uid://ghyaxk6d7sqp" path="res://audio/182_Country_Village.mp3" id="4_dgyku"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="4_hmkyf"]
+[ext_resource type="FontFile" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="4_hmkyf"]
 [ext_resource type="Script" path="res://scenes/player/spring_arm_3d.gd" id="4_m78yi"]
 [ext_resource type="Script" path="res://scenes/player/camera.gd" id="5_5lpma"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="7_mxmck"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5jphs"]
 resource_name = "Peasant_Man_02"
@@ -3569,7 +3570,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("4_hmkyf")
+theme_override_fonts/font = ExtResource("7_mxmck")
 theme_override_font_sizes/font_size = 30
 text = "Money:"
 
@@ -3579,7 +3580,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("4_hmkyf")
+theme_override_fonts/font = ExtResource("7_mxmck")
 theme_override_font_sizes/font_size = 30
 text = "Food:"
 
@@ -3593,7 +3594,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("4_hmkyf")
+theme_override_fonts/font = ExtResource("7_mxmck")
 theme_override_font_sizes/font_size = 30
 
 [node name="Food2" type="Label" parent="UI/HBoxContainer/Values"]
@@ -3603,7 +3604,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("4_hmkyf")
+theme_override_fonts/font = ExtResource("7_mxmck")
 theme_override_font_sizes/font_size = 30
 
 [node name="music" type="AudioStreamPlayer3D" parent="."]

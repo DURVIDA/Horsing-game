@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt8q80ltp017g"
+path="res://.godot/imported/armchair.obj-259ad0ddc39c73c2a124becf1e9cf86b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/armchair.obj-259ad0ddc39c73c2a124becf1e9cf86b.mesh"]
+
+source_file="res://asset_packs/furnitures/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/armchair.obj"
+dest_files=["res://.godot/imported/armchair.obj-259ad0ddc39c73c2a124becf1e9cf86b.mesh", "res://.godot/imported/armchair.obj-259ad0ddc39c73c2a124becf1e9cf86b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

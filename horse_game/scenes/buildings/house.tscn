@@ -85,9 +85,11 @@ transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 15, 6.5, 0, -17.468)
 
 [node name="ceiling" parent="floors" instance=ExtResource("2_k0hjc")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 7, 0)
+visible = false
 
 [node name="ceiling2" parent="floors" instance=ExtResource("2_k0hjc")]
 transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 15, 6.5, 7, -17.468)
+visible = false
 
 [node name="porch" parent="floors" instance=ExtResource("2_k0hjc")]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, -18, 0, 0)

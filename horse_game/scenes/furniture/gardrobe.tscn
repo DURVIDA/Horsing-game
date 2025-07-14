@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckc8sdiihc7nr"]
 
-[ext_resource type="ArrayMesh" uid="uid://dhu81wagt1svn" path="res://asset_packs/3d-furnitre-pack/dist/obj_mtl/cupboard.obj" id="1_1ewhd"]
+[ext_resource type="ArrayMesh" uid="uid://dhu81wagt1svn" path="res://asset_packs/furnitures/dist/obj_mtl/cupboard.obj" id="1_k0pn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnlq1"]
 albedo_color = Color(0.509598, 0.202815, 0.070521, 1)
@@ -11,7 +11,7 @@ size = Vector3(3.03569, 1, 2.9306)
 [node name="Gardrobe" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_1ewhd")
+mesh = ExtResource("1_k0pn7")
 surface_material_override/0 = SubResource("StandardMaterial3D_rnlq1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]

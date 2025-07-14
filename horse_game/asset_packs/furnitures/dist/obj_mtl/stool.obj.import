@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxl2q8ov8usg5"
+path="res://.godot/imported/stool.obj-ce84867396c7cd310fed493e3c16b16f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stool.obj-ce84867396c7cd310fed493e3c16b16f.mesh"]
+
+source_file="res://asset_packs/furnitures/dist/obj_mtl/stool.obj"
+dest_files=["res://.godot/imported/stool.obj-ce84867396c7cd310fed493e3c16b16f.mesh", "res://.godot/imported/stool.obj-ce84867396c7cd310fed493e3c16b16f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

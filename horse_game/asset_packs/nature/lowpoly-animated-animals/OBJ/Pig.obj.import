@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pq8g1ncunf8q"
+path="res://.godot/imported/Pig.obj-8cd38d61ba0000226281cdc5de7c5801.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pig.obj-8cd38d61ba0000226281cdc5de7c5801.mesh"]
+
+source_file="res://asset_packs/nature/lowpoly-animated-animals/OBJ/Pig.obj"
+dest_files=["res://.godot/imported/Pig.obj-8cd38d61ba0000226281cdc5de7c5801.mesh", "res://.godot/imported/Pig.obj-8cd38d61ba0000226281cdc5de7c5801.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5nve1u1552y2"]
 
-[ext_resource type="ArrayMesh" uid="uid://1041eewmhekc" path="res://asset_packs/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/shelf_B_large_decorated.obj" id="1_m5yme"]
+[ext_resource type="ArrayMesh" uid="uid://1041eewmhekc" path="res://asset_packs/furnitures/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/shelf_B_large_decorated.obj" id="1_kp2y8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v1gs2"]
 size = Vector3(3.03569, 1, 2.9306)
@@ -8,7 +8,7 @@ size = Vector3(3.03569, 1, 2.9306)
 [node name="bigshelf_decorated" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_m5yme")
+mesh = ExtResource("1_kp2y8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 collision_layer = 2

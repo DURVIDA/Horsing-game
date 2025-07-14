@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6uwwkiklxcg5"
+path="res://.godot/imported/table-modern.obj-4acfddd2901d923043cde8b0f8af325a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table-modern.obj-4acfddd2901d923043cde8b0f8af325a.mesh"]
+
+source_file="res://asset_packs/furnitures/dist/obj_mtl/table-modern.obj"
+dest_files=["res://.godot/imported/table-modern.obj-4acfddd2901d923043cde8b0f8af325a.mesh", "res://.godot/imported/table-modern.obj-4acfddd2901d923043cde8b0f8af325a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

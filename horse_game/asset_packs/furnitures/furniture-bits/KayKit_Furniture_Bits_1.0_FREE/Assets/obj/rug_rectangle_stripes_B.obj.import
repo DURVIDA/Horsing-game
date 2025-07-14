@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvs7to4ts3xx2"
+path="res://.godot/imported/rug_rectangle_stripes_B.obj-ef2c77ba12d4471ab42cc4aa4029f279.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rug_rectangle_stripes_B.obj-ef2c77ba12d4471ab42cc4aa4029f279.mesh"]
+
+source_file="res://asset_packs/furnitures/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/rug_rectangle_stripes_B.obj"
+dest_files=["res://.godot/imported/rug_rectangle_stripes_B.obj-ef2c77ba12d4471ab42cc4aa4029f279.mesh", "res://.godot/imported/rug_rectangle_stripes_B.obj-ef2c77ba12d4471ab42cc4aa4029f279.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
