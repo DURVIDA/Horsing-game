@@ -91,4 +91,7 @@ func sell_food() -> void:
 		print("❌ No food to sell.")
 		
 func open_store() -> void:
-	pass
+	if Gamestate.money >= 100:
+		Gamestate.stored_food += 10
+		Gamestate.money -= 100
+		pass

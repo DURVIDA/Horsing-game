@@ -16,7 +16,7 @@ func save_game(data: Dictionary) -> void:
 	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
 	file.close()
-	print("✅ Game saved to slot %d" % Gamestate.slot, Gamestate.money, Gamestate.food)
+	print("✅ Game saved to slot %d" % Gamestate.slot, Gamestate.money, Gamestate.food, Gamestate.stored_food)
 
 
 func load_game(slot: int) -> Dictionary:

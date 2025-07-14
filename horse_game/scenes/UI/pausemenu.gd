@@ -36,7 +36,8 @@ func _on_restart_pressed() -> void:
 func _on_quit_pressed() -> void:
 	var current_data = {
 	"money": Gamestate.money,
-	"food": Gamestate.food
+	"food": Gamestate.food,
+	"stored_food" : Gamestate.stored_food,
 }
 	SaveManager.save_game(current_data)
 	resume()

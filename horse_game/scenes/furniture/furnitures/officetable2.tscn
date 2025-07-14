@@ -53,12 +53,14 @@ mesh = SubResource("ArrayMesh_xj5jo")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table2_Plane_009"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Table2_Plane_009/StaticBody3D"]
 transform = Transform3D(0.04, 0, 0, 0, 0.01, -1.66533e-16, 0, 1.66533e-16, 0.01, 0, -0.000337306, -4.29281e-10)
 shape = SubResource("BoxShape3D_uq1x0")
 
 [node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 4
 script = ExtResource("1_tv6k6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]

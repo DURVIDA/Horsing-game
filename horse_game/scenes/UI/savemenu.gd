@@ -26,6 +26,7 @@ func apply_loaded_data(data: Dictionary) -> void:
 		# Example: assuming your player is autoloaded
 		Gamestate.food = data.get("food", 0)
 		Gamestate.money = data.get("money", 0)
+		Gamestate.stored_food = data.get("stored_food", 10)
 		print("✅ Loaded: %s" % data)
 	else:
 		print("❌ Failed to load or no data found.")
