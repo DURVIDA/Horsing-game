@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkbynibnjlmcy"]
+
+[ext_resource type="Shader" path="res://scenes/buiding_blocks/water.gdshader" id="1_lwi7u"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3c6mf"]
+lightmap_size_hint = Vector2i(7, 7)
+orientation = 1
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ji52t"]
+frequency = 0.004
+fractal_type = 2
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pucl2"]
+bump_strength = 5.0
+noise = SubResource("FastNoiseLite_ji52t")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jv77r"]
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_px0td"]
+seamless = true
+bump_strength = 8.7
+noise = SubResource("FastNoiseLite_jv77r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7seq5"]
+render_priority = 0
+shader = ExtResource("1_lwi7u")
+shader_parameter/water_color = Color(0.173485, 0.286846, 0.707497, 1)
+shader_parameter/uv_scale = 2.0
+shader_parameter/time_scale = 1.0
+shader_parameter/color_ratio = 1.0
+shader_parameter/abberation_r = Vector2(0, 0)
+shader_parameter/abberation_g = Vector2(3, 0.07)
+shader_parameter/abberation_b = Vector2(0.835, 0.355)
+shader_parameter/water_normal_noise = SubResource("NoiseTexture2D_px0td")
+shader_parameter/sun_highlights = SubResource("NoiseTexture2D_pucl2")
+
+[node name="water" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_3c6mf")
+surface_material_override/0 = SubResource("ShaderMaterial_7seq5")
