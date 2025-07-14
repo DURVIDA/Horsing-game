@@ -1,16 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://bvjh1pw87l7sy"]
+[gd_scene load_steps=20 format=3 uid="uid://bvjh1pw87l7sy"]
 
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_5owun"]
 [ext_resource type="PackedScene" uid="uid://d2ao018bm0eg7" path="res://scenes/player/player.tscn" id="3_cnqpo"]
+[ext_resource type="PackedScene" uid="uid://qn37cw6a24dm" path="res://scenes/buiding_blocks/plants/pine1.tscn" id="5_nh825"]
+[ext_resource type="PackedScene" uid="uid://bqcqkcf17iri" path="res://scenes/buiding_blocks/plants/pine2.tscn" id="6_hmsif"]
+[ext_resource type="PackedScene" uid="uid://d2rvl2kla2at7" path="res://scenes/buiding_blocks/plants/pine3.tscn" id="7_gs0cs"]
 [ext_resource type="PackedScene" uid="uid://bw2w8pisvtqe7" path="res://scenes/UI/pausemenu.tscn" id="8_asj4k"]
 [ext_resource type="PackedScene" uid="uid://d2messd7kiiav" path="res://scenes/buiding_blocks/plants/tree.tscn" id="9_q5eeo"]
 [ext_resource type="PackedScene" uid="uid://b25ucyka7b5aq" path="res://scenes/buiding_blocks/plants/rock.tscn" id="10_ecrcm"]
 [ext_resource type="PackedScene" uid="uid://brrlmpvcnidv" path="res://scenes/buiding_blocks/plants/bush.tscn" id="10_lhjqw"]
 [ext_resource type="PackedScene" uid="uid://c3uadab77u3ad" path="res://scenes/buildings/barn.tscn" id="12_ewijr"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="12_mqq4y"]
+[ext_resource type="PackedScene" uid="uid://dv75bqkr1vkjv" path="res://scenes/buildings/house.tscn" id="13_56xbq"]
 [ext_resource type="Resource" path="res://terrain/data.hterrain" id="13_kwqra"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="14_k1j1b"]
-[ext_resource type="PackedScene" uid="uid://cgs2iqpv75bdq" path="res://scenes/buiding_blocks/sky.tscn" id="15_c0k6f"]
 [ext_resource type="PackedScene" uid="uid://bkbynibnjlmcy" path="res://scenes/buiding_blocks/water.tscn" id="18_5nh7p"]
 
 [sub_resource type="Resource" id="Resource_ko38r"]
@@ -40,7 +43,7 @@ script = ExtResource("1_5owun")
 z_index = -2
 
 [node name="player" parent="." instance=ExtResource("3_cnqpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.958, 1.19504, 180.904)
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 126.958, 1.19504, 180.904)
 
 [node name="plants" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.958, 0.395039, 173.904)
@@ -58,6 +61,42 @@ transform = Transform3D(-0.479474, 0, -1.94168, 0, 2, 0, 1.94168, 0, -0.479474, 
 
 [node name="Tree4" parent="plants/Trees" instance=ExtResource("9_q5eeo")]
 transform = Transform3D(-0.479474, 0, -1.94168, 0, 2, 0, 1.94168, 0, -0.479474, -29.5285, 0.3, 32.7303)
+
+[node name="pine1" parent="plants/Trees" instance=ExtResource("5_nh825")]
+transform = Transform3D(1.05109, 0, -1.70153, 0, 2, 0, 1.70153, 0, 1.05109, 69.4414, 38.2511, -216.871)
+
+[node name="pine6" parent="plants/Trees" instance=ExtResource("5_nh825")]
+transform = Transform3D(-1.60687, 0, -1.9152, 0, 2.5, 0, 1.9152, 0, -1.60687, 91.9117, 40.0797, -216.871)
+
+[node name="pine5" parent="plants/Trees" instance=ExtResource("5_nh825")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 70.4414, 43.4259, -190.975)
+
+[node name="pine10" parent="plants/Trees" instance=ExtResource("5_nh825")]
+transform = Transform3D(0.93383, 0, -1.99197, 0, 2.2, 0, 1.99197, 0, 0.93383, 48.191, 36.014, -200.244)
+
+[node name="pine2" parent="plants/Trees" instance=ExtResource("6_hmsif")]
+transform = Transform3D(1.93235, 0, -0.515783, 0, 2, 0, 0.515783, 0, 1.93235, 77.1367, 43.0599, -206.893)
+
+[node name="pine11" parent="plants/Trees" instance=ExtResource("6_hmsif")]
+transform = Transform3D(0.0860268, 0, -1.19691, 0, 1.2, 0, 1.19691, 0, 0.0860268, 60.2177, 40.1601, -193.778)
+
+[node name="pine9" parent="plants/Trees" instance=ExtResource("6_hmsif")]
+transform = Transform3D(1.25603, 0, -0.335259, 0, 1.3, 0, 0.335259, 0, 1.25603, 77.1367, 43.0599, -184.784)
+
+[node name="pine7" parent="plants/Trees" instance=ExtResource("6_hmsif")]
+transform = Transform3D(1.93235, 0, -0.515783, 0, 2, 0, 0.515783, 0, 1.93235, 75.9757, 35.3125, -231.456)
+
+[node name="pine3" parent="plants/Trees" instance=ExtResource("7_gs0cs")]
+transform = Transform3D(0.833355, 0, -1.2472, 0, 1.5, 0, 1.2472, 0, 0.833355, 80.838, 39.1845, -222.852)
+
+[node name="pine8" parent="plants/Trees" instance=ExtResource("7_gs0cs")]
+transform = Transform3D(1.7795, 0, -0.912892, 0, 2, 0, 0.912892, 0, 1.7795, 58.537, 34.2604, -222.852)
+
+[node name="pine12" parent="plants/Trees" instance=ExtResource("7_gs0cs")]
+transform = Transform3D(1.7795, 0, -0.912892, 0, 2, 0, 0.912892, 0, 1.7795, 65.7254, 41.2782, -183.206)
+
+[node name="pine4" parent="plants/Trees" instance=ExtResource("7_gs0cs")]
+transform = Transform3D(-0.445116, 0, 1.7441, 0, 1.8, 0, -1.7441, 0, -0.445116, 60.7143, 37.5466, -207.38)
 
 [node name="Rocks" type="Node3D" parent="plants"]
 
@@ -83,15 +122,12 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.503, 0.5, -3.65471)
 
 [node name="worldstuff" type="Node3D" parent="."]
 
-[node name="sky" parent="worldstuff" instance=ExtResource("15_c0k6f")]
-transform = Transform3D(40, 0, 0, 0, 2, 0, 0, 0, 40, 0, 170, 0)
-
 [node name="HTerrain" type="Node3D" parent="worldstuff"]
 script = ExtResource("12_mqq4y")
 map_scale = Vector3(5, 1, 5)
 centered = true
 _terrain_data = ExtResource("13_kwqra")
-chunk_size = 32
+chunk_size = 16
 collision_enabled = true
 collision_layer = 2
 collision_mask = 1
@@ -117,3 +153,7 @@ environment = SubResource("Environment_vb72v")
 transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 1, 0)
 
 [node name="barn" parent="." instance=ExtResource("12_ewijr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="House" parent="." instance=ExtResource("13_56xbq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 104.873, 1.23514, 240.75)

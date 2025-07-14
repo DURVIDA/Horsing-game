@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://n8vwnsjmfsdl"]
+
+[ext_resource type="ArrayMesh" uid="uid://bdja1k4mqw4m6" path="res://asset_packs/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/table_medium_long.obj" id="1_g0fbo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v1gs2"]
+size = Vector3(3.03569, 1, 2.9306)
+
+[node name="coffetable" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_g0fbo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.7, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_v1gs2")

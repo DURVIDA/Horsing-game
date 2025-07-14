@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs45255q38myj"]
+[gd_scene load_steps=4 format=3 uid="uid://cs45255q38myj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_twnwf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8bub"]
+albedo_color = Color(0.518872, 0.242439, 0.10951, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rgmwj"]
 
@@ -10,6 +13,7 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("BoxMesh_twnwf")
+surface_material_override/0 = SubResource("StandardMaterial3D_v8bub")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 collision_layer = 2

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7ndkqx7sfgsu"
+path="res://.godot/imported/chair-rock.obj-59354cc074592515de4fbd0427b78c56.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chair-rock.obj-59354cc074592515de4fbd0427b78c56.mesh"]
+
+source_file="res://asset_packs/3d-furnitre-pack/dist/obj_mtl/chair-rock.obj"
+dest_files=["res://.godot/imported/chair-rock.obj-59354cc074592515de4fbd0427b78c56.mesh", "res://.godot/imported/chair-rock.obj-59354cc074592515de4fbd0427b78c56.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

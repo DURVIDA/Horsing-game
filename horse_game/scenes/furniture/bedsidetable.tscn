@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dayga8jf2r3pc"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqd58joihsoi0" path="res://asset_packs/furniture-bits/KayKit_Furniture_Bits_1.0_FREE/Assets/obj/cabinet_small.obj" id="1_iu3r5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6now"]
+
+[node name="Bedsidetable" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_iu3r5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_y6now")
