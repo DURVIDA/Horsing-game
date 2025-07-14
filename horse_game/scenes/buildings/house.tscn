@@ -1,15 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://dv75bqkr1vkjv"]
+[gd_scene load_steps=14 format=3 uid="uid://dv75bqkr1vkjv"]
 
 [ext_resource type="PackedScene" uid="uid://6curo0es7374" path="res://scenes/buiding_blocks/wall.tscn" id="1_p5yru"]
 [ext_resource type="PackedScene" uid="uid://cs45255q38myj" path="res://scenes/buiding_blocks/floor.tscn" id="2_k0hjc"]
-[ext_resource type="PackedScene" uid="uid://bbxf0mqaeymwx" path="res://scenes/furniture/bed.tscn" id="3_jbnbh"]
-[ext_resource type="PackedScene" uid="uid://dayga8jf2r3pc" path="res://scenes/furniture/bedsidetable.tscn" id="4_pxf24"]
+[ext_resource type="PackedScene" uid="uid://bbxf0mqaeymwx" path="res://scenes/furniture/furnitures/bed.tscn" id="3_jbnbh"]
+[ext_resource type="PackedScene" uid="uid://dayga8jf2r3pc" path="res://scenes/furniture/furnitures/bedsidetable.tscn" id="4_pxf24"]
 [ext_resource type="PackedScene" uid="uid://c8tdphvaiy6yo" path="res://scenes/buiding_blocks/plants/sofa.tscn" id="5_w48cr"]
-[ext_resource type="PackedScene" uid="uid://b3rqyh5lxtknq" path="res://scenes/furniture/armchair.tscn" id="6_3s253"]
-[ext_resource type="PackedScene" uid="uid://n8vwnsjmfsdl" path="res://scenes/furniture/coffetable.tscn" id="7_kwt67"]
-[ext_resource type="PackedScene" uid="uid://c5nve1u1552y2" path="res://scenes/furniture/bigshelf_decorated.tscn" id="8_6u65b"]
-[ext_resource type="PackedScene" uid="uid://ckc8sdiihc7nr" path="res://scenes/furniture/gardrobe.tscn" id="9_mrg8k"]
-[ext_resource type="PackedScene" uid="uid://c7dj4es1rh662" path="res://scenes/furniture/lamp.tscn" id="10_a1aj1"]
+[ext_resource type="PackedScene" uid="uid://b3rqyh5lxtknq" path="res://scenes/furniture/furnitures/armchair.tscn" id="6_3s253"]
+[ext_resource type="PackedScene" uid="uid://n8vwnsjmfsdl" path="res://scenes/furniture/furnitures/coffetable.tscn" id="7_kwt67"]
+[ext_resource type="PackedScene" uid="uid://c5nve1u1552y2" path="res://scenes/furniture/furnitures/bigshelf_decorated.tscn" id="8_6u65b"]
+[ext_resource type="PackedScene" uid="uid://ckc8sdiihc7nr" path="res://scenes/furniture/furnitures/gardrobe.tscn" id="9_mrg8k"]
+[ext_resource type="PackedScene" uid="uid://c7dj4es1rh662" path="res://scenes/furniture/furnitures/lamp.tscn" id="10_a1aj1"]
+[ext_resource type="PackedScene" uid="uid://2rknf2cvohr8" path="res://scenes/furniture/furnitures/officetable2.tscn" id="11_m3fox"]
+[ext_resource type="PackedScene" uid="uid://hstlfy8f6bn5" path="res://scenes/furniture/furnitures/computer.tscn" id="12_we6jw"]
+[ext_resource type="PackedScene" uid="uid://rbv1ksl7c5ey" path="res://scenes/furniture/furnitures/compchair.tscn" id="13_3dl3m"]
 
 [node name="House" type="Node3D"]
 
@@ -131,6 +134,15 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 0, 9.9165)
 
 [node name="lamp" parent="furnitures" instance=ExtResource("10_a1aj1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13.3, 2.2, 5.2)
+
+[node name="LongTable" parent="furnitures" instance=ExtResource("11_m3fox")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -13.456, 0.6, 10.514)
+
+[node name="Computer" parent="furnitures" instance=ExtResource("12_we6jw")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -13.5, 2.34994, 10)
+
+[node name="ComputerChair" parent="furnitures" instance=ExtResource("13_3dl3m")]
+transform = Transform3D(-0.0707107, 0, -0.0707107, 0, 0.1, 0, 0.0707107, 0, -0.0707107, -10.124, 0.983385, 11.1333)
 
 [node name="lights" type="Node3D" parent="."]
 

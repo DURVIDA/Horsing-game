@@ -90,3 +90,5 @@ func sell_food() -> void:
 	else:
 		print("❌ No food to sell.")
 		
+func open_store() -> void:
+	pass
