@@ -26,35 +26,17 @@ theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 1"
 
-[node name="Stats" type="Label" parent="VBoxContainer/Slot 1"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 125.0
-offset_bottom = 74.0
-
 [node name="Slot 2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 2"
 
-[node name="Stats2" type="Label" parent="VBoxContainer/Slot 2"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="Slot 3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Save slot 3"
-
-[node name="Stats3" type="Label" parent="VBoxContainer/Slot 3"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -66,6 +48,36 @@ theme_override_fonts/font = ExtResource("2_e3umi")
 theme_override_font_sizes/font_size = 30
 text = "Back
 "
+
+[node name="Stats" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 839.0
+offset_top = 40.0
+offset_right = 1287.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+
+[node name="Stats2" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 849.0
+offset_top = 161.0
+offset_right = 1297.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+
+[node name="Stats3" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 841.0
+offset_top = 291.0
+offset_right = 1289.0
+offset_bottom = 358.0
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="VBoxContainer/Slot 1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Slot 2" to="." method="_on_slot_2_pressed"]

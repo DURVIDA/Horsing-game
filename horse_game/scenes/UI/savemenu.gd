@@ -3,19 +3,22 @@ extends Control
 @onready var slot_1: Button = $"VBoxContainer/Slot 1"
 @onready var slot_2: Button = $"VBoxContainer/Slot 2"
 @onready var slot_3: Button = $"VBoxContainer/Slot 3"
+@onready var stats: Label = %Stats
+@onready var stats_2: Label = %Stats2
+@onready var stats_3: Label = %Stats3
 
 func _ready() -> void:
 	update_slot_labels()
 
 func update_slot_labels() -> void:
-	update_slot_label(1, slot_1)
-	update_slot_label(2, slot_2)
-	update_slot_label(3, slot_3)
+	update_slot_label(1, stats)
+	update_slot_label(2, stats_2)
+	update_slot_label(3, stats_3)
 
-func update_slot_label(slot: int, button: Button) -> void:
+func update_slot_label(slot: int, label: Label) -> void:
 	var data = SaveManager.load_game(slot)
 	if data:
-		button.text = "Slot %d\n💰%d | 🍎%d | 📦%d | Lv.%d" % [
+		label.text = "Slot %d\n💰%d | 🍎%d | 📦%d | Lv.%d" % [
 			slot,
 			data.get("money", 0),
 			data.get("food", 0),
@@ -23,7 +26,7 @@ func update_slot_label(slot: int, button: Button) -> void:
 			data.get("food_level", 1)
 		]
 	else:
-		button.text = "Slot %d\n(Empty)" % slot
+		label.text = "Slot %d\n(Empty)" % slot
 	
 
 func _on_slot_1_pressed() -> void:
