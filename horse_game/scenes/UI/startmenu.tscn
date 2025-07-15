@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://4x4hb41ykusj"]
 
 [ext_resource type="Script" path="res://scenes/UI/startmenu.gd" id="1_u7is3"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="2_rjmn2"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="2_rjmn2"]
 
 [node name="Startmenu" type="Control"]
 layout_mode = 3
