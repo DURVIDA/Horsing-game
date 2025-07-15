@@ -157,3 +157,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 
 [node name="House" parent="." instance=ExtResource("13_56xbq")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 104.873, 1.23514, 240.75)
+
+[node name="Birdseye" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 275.065, 0)
+
+[editable path="player"]

@@ -18,8 +18,7 @@ func update_slot_labels() -> void:
 func update_slot_label(slot: int, label: Label) -> void:
 	var data = SaveManager.load_game(slot)
 	if data:
-		label.text = "Slot %d\n💰%d | 🍎%d | 📦%d | Lv.%d" % [
-			slot,
+		label.text = "💰%d | 🍎%d | 📦%d | Lv.%d" % [
 			data.get("money", 0),
 			data.get("food", 0),
 			data.get("stored_food", 0),
