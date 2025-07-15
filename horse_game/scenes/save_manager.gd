@@ -20,15 +20,14 @@ func save_game(data: Dictionary) -> void:
 
 
 func load_game(slot: int) -> Dictionary:
-	slot = Gamestate.slot
 	if slot < 1 or slot > SAVE_SLOT_COUNT:
-		push_error("Invalid load slot: %d" % Gamestate.slot)
+		push_error("Invalid load slot: %d" % slot)
 		return {}
 	
-	var file_path = "%s%d.json" % [SAVE_PATH, Gamestate.slot]
+	var file_path = "%s%d.json" % [SAVE_PATH, slot]
 	
 	if not FileAccess.file_exists(file_path):
-		print("❌ No save file in slot %d" % Gamestate.slot)
+		print("❌ No save file in slot %d" % slot)
 		return {}
 
 	var file = FileAccess.open(file_path, FileAccess.READ)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/UI/pausemenu.gd" id="1_rto66"]
 [ext_resource type="Shader" path="res://scenes/UI/pausemenu.gdshader" id="2_w5ptn"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/shooting star font/Shooting Star.ttf" id="3_hro73"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="3_hro73"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7d2d"]
 shader = ExtResource("2_w5ptn")
@@ -91,10 +91,10 @@ offset_bottom = 715.0
 [node name="PanelContainer" type="PanelContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 401.0
-offset_top = 138.0
-offset_right = 855.0
-offset_bottom = 393.0
+offset_left = 400.0
+offset_top = 225.0
+offset_right = 854.0
+offset_bottom = 480.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
