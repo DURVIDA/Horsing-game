@@ -11,6 +11,7 @@ const JUMP_VELOCITY = 4.5
 @onready var armature: Node3D = $Armature
 @export var sens := 0.5
 
+var current_upgradeable : Node = null
 var current_interactable: Node = null
 var speed = WALK_SPEED
 
@@ -34,6 +35,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and current_interactable:
 		if current_interactable.has_method("interact"):
 			current_interactable.interact(self)
+	if Input.is_action_just_pressed("upgrade") and current_upgradeable:
+		if current_upgradeable.has_method("upgrade"):
+			current_upgradeable.upgrade(self)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -71,12 +75,18 @@ func _on_interaction_area_area_entered(body: Node3D) -> void:
 		%InteractText.show()
 		current_interactable = body
 		print(body)
-
+	if body.has_method("upgrade"):
+		%InteractText2.show()
+		current_upgradeable = body
+		print(body)
+		
 func _on_interaction_area_area_exited(body: Node3D) -> void:
 	if body == current_interactable:
 		%InteractText.hide()
 		current_interactable = null
-		
+	if body == current_upgradeable:
+		%InteractText2.hide()
+		current_upgradeable = null
 func add_food(amount: int) -> void:
 	Gamestate.food += amount
 	print("🍎 Food collected: ", Gamestate.food)
@@ -92,6 +102,10 @@ func sell_food() -> void:
 		
 func open_store() -> void:
 	if Gamestate.money >= 100:
-		Gamestate.stored_food += 10
+		Gamestate.stored_food += 9 + Gamestate.food_level
 		Gamestate.money -= 100
 		pass
+func upgrade_store() -> void:
+	if Gamestate.money >= 20:
+		Gamestate.food_level +=1
+		Gamestate.money -= 20

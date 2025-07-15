@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv75bqkr1vkjv"]
+[gd_scene load_steps=17 format=3 uid="uid://dv75bqkr1vkjv"]
 
 [ext_resource type="PackedScene" uid="uid://6curo0es7374" path="res://scenes/buiding_blocks/wall.tscn" id="1_p5yru"]
 [ext_resource type="PackedScene" uid="uid://cs45255q38myj" path="res://scenes/buiding_blocks/floor.tscn" id="2_k0hjc"]
@@ -10,8 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://c5nve1u1552y2" path="res://scenes/furniture/furnitures/bigshelf_decorated.tscn" id="8_6u65b"]
 [ext_resource type="PackedScene" uid="uid://ckc8sdiihc7nr" path="res://scenes/furniture/furnitures/gardrobe.tscn" id="9_mrg8k"]
 [ext_resource type="PackedScene" uid="uid://c7dj4es1rh662" path="res://scenes/furniture/furnitures/lamp.tscn" id="10_a1aj1"]
+[ext_resource type="PackedScene" uid="uid://xqpavpqcyxdf" path="res://scenes/furniture/furnitures/small_table.tscn" id="11_43nt5"]
 [ext_resource type="PackedScene" uid="uid://2rknf2cvohr8" path="res://scenes/furniture/furnitures/officetable2.tscn" id="11_m3fox"]
+[ext_resource type="PackedScene" uid="uid://bg7xp82d3ems" path="res://scenes/furniture/furnitures/tv.tscn" id="12_2uw21"]
 [ext_resource type="PackedScene" uid="uid://hstlfy8f6bn5" path="res://scenes/furniture/furnitures/computer.tscn" id="12_we6jw"]
+[ext_resource type="PackedScene" uid="uid://jltw1w4fvptv" path="res://scenes/furniture/furnitures/vcr.tscn" id="13_1hb80"]
 [ext_resource type="PackedScene" uid="uid://rbv1ksl7c5ey" path="res://scenes/furniture/furnitures/compchair.tscn" id="13_3dl3m"]
 
 [node name="House" type="Node3D"]
@@ -108,40 +111,55 @@ transform = Transform3D(0.6, 0, 0, 0, 0.2, 0, 0, 0, 1, -23.1353, 0, -4.74226)
 
 [node name="furnitures" type="Node3D" parent="."]
 
-[node name="bed" parent="furnitures" instance=ExtResource("3_jbnbh")]
+[node name="bedroom" type="Node3D" parent="furnitures"]
+
+[node name="bed" parent="furnitures/bedroom" instance=ExtResource("3_jbnbh")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 11.5, 0.5, 10)
 
-[node name="Bedsidetable" parent="furnitures" instance=ExtResource("4_pxf24")]
+[node name="Bedsidetable" parent="furnitures/bedroom" instance=ExtResource("4_pxf24")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 13.3, 0.5, 5.2)
 
-[node name="sofa" parent="furnitures" instance=ExtResource("5_w48cr")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 0.5, -4.831)
-
-[node name="armchair" parent="furnitures" instance=ExtResource("6_3s253")]
-transform = Transform3D(1.14494, 0, -1.38892, 0, 1.8, 0, 1.38892, 0, 1.14494, 10.6107, 0.5, -11.2721)
-
-[node name="coffetable" parent="furnitures" instance=ExtResource("7_kwt67")]
-transform = Transform3D(-4.80825e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, -4.80825e-08, 8.18235, 0.5, -5.01393)
-
-[node name="bigshelf_decorated" parent="furnitures" instance=ExtResource("8_6u65b")]
-transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 14.8, 5.047, -2.29832)
-
-[node name="Gardrobe" parent="furnitures" instance=ExtResource("9_mrg8k")]
+[node name="Gardrobe" parent="furnitures/bedroom" instance=ExtResource("9_mrg8k")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 0, 13)
 
-[node name="Gardrobe2" parent="furnitures" instance=ExtResource("9_mrg8k")]
+[node name="Gardrobe2" parent="furnitures/bedroom" instance=ExtResource("9_mrg8k")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5, 0, 9.9165)
 
-[node name="lamp" parent="furnitures" instance=ExtResource("10_a1aj1")]
+[node name="lamp" parent="furnitures/bedroom" instance=ExtResource("10_a1aj1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13.3, 2.2, 5.2)
 
-[node name="LongTable" parent="furnitures" instance=ExtResource("11_m3fox")]
+[node name="livingroom" type="Node3D" parent="furnitures"]
+
+[node name="sofa" parent="furnitures/livingroom" instance=ExtResource("5_w48cr")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 0.5, -4.831)
+
+[node name="armchair" parent="furnitures/livingroom" instance=ExtResource("6_3s253")]
+transform = Transform3D(1.14494, 0, -1.38892, 0, 1.8, 0, 1.38892, 0, 1.14494, 10.6107, 0.5, -11.2721)
+
+[node name="coffetable" parent="furnitures/livingroom" instance=ExtResource("7_kwt67")]
+transform = Transform3D(-4.80825e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, -4.80825e-08, 8.18235, 0.5, -5.01393)
+
+[node name="bigshelf_decorated" parent="furnitures/livingroom" instance=ExtResource("8_6u65b")]
+transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 14.8, 5.047, -2.29832)
+
+[node name="SmallTable" parent="furnitures/livingroom" instance=ExtResource("11_43nt5")]
+transform = Transform3D(1.93185, 0, 0.517638, 0, 2, 0, -0.517638, 0, 1.93185, -4.69414, 0.54274, 1.57257)
+
+[node name="TV" parent="furnitures/livingroom" instance=ExtResource("12_2uw21")]
+transform = Transform3D(-0.517638, 0, 1.93185, 0, 2, 0, -1.93185, 0, -0.517638, -4.76136, 2.71962, 1.56388)
+
+[node name="VCR" parent="furnitures/livingroom" instance=ExtResource("13_1hb80")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -4.46925, 0.55, 1.5313)
+
+[node name="office" type="Node3D" parent="furnitures"]
+
+[node name="LongTable" parent="furnitures/office" instance=ExtResource("11_m3fox")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -13.456, 0.6, 10.514)
 
-[node name="Computer" parent="furnitures" instance=ExtResource("12_we6jw")]
+[node name="Computer" parent="furnitures/office" instance=ExtResource("12_we6jw")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -13.5, 2.34994, 10)
 
-[node name="ComputerChair" parent="furnitures" instance=ExtResource("13_3dl3m")]
+[node name="ComputerChair" parent="furnitures/office" instance=ExtResource("13_3dl3m")]
 transform = Transform3D(-0.0707107, 0, -0.0707107, 0, 0.1, 0, 0.0707107, 0, -0.0707107, -10.124, 0.983385, 11.1333)
 
 [node name="lights" type="Node3D" parent="."]

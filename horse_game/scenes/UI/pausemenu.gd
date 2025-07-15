@@ -1,6 +1,7 @@
 extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var player: Player = $"../../player"
 
 var slot = Gamestate.slot
 
@@ -38,6 +39,7 @@ func _on_quit_pressed() -> void:
 	"money": Gamestate.money,
 	"food": Gamestate.food,
 	"stored_food" : Gamestate.stored_food,
+	"food_level" : Gamestate.food_level,
 }
 	SaveManager.save_game(current_data)
 	resume()
