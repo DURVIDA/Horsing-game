@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo5h3eyl82r6j"
+path="res://.godot/imported/striped_block_red.obj-5b288f7c8eff351259813045636a1685.mesh"
+
+[deps]
+
+files=["res://.godot/imported/striped_block_red.obj-5b288f7c8eff351259813045636a1685.mesh"]
+
+source_file="res://asset_packs/nature/block-bits/KayKit_BlockBits_1.0_FREE/Assets/obj/striped_block_red.obj"
+dest_files=["res://.godot/imported/striped_block_red.obj-5b288f7c8eff351259813045636a1685.mesh", "res://.godot/imported/striped_block_red.obj-5b288f7c8eff351259813045636a1685.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

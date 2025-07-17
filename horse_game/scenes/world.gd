@@ -1,7 +1,8 @@
 extends Node3D
 
 @onready var cam_player: Camera3D = $player/CameraOrigin/Camera3D
-@onready var cam_birdseye: Camera3D = $Birdseye
+@onready var cam_birdseye: Camera3D = $worldstuff/Birdseye
+
 
 
 # Called when the node enters the scene tree for the first time.

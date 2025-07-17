@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwyae6m0sos2i"
+path="res://.godot/imported/stone_with_silver.obj-104dc73386130beae5c42439be7c268d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone_with_silver.obj-104dc73386130beae5c42439be7c268d.mesh"]
+
+source_file="res://asset_packs/nature/block-bits/KayKit_BlockBits_1.0_FREE/Assets/obj/stone_with_silver.obj"
+dest_files=["res://.godot/imported/stone_with_silver.obj-104dc73386130beae5c42439be7c268d.mesh", "res://.godot/imported/stone_with_silver.obj-104dc73386130beae5c42439be7c268d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

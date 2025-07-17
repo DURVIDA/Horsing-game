@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bomypty3c6fup"
+path="res://.godot/imported/decorative_block_red.obj-4f212ea55e2298f0f7e847b7a2eb39e1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/decorative_block_red.obj-4f212ea55e2298f0f7e847b7a2eb39e1.mesh"]
+
+source_file="res://asset_packs/nature/block-bits/KayKit_BlockBits_1.0_FREE/Assets/obj/decorative_block_red.obj"
+dest_files=["res://.godot/imported/decorative_block_red.obj-4f212ea55e2298f0f7e847b7a2eb39e1.mesh", "res://.godot/imported/decorative_block_red.obj-4f212ea55e2298f0f7e847b7a2eb39e1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://di612mhvocgji"]
+
+[ext_resource type="PackedScene" uid="uid://cufb8wxy4tpya" path="res://terrain/tiles wit collision/grassy_dirt_col.tscn" id="39_xsoi5"]
+[ext_resource type="PackedScene" uid="uid://cblayxde6ejqr" path="res://terrain/tiles wit collision/gravel_col.tscn" id="40_lcxkn"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="dirt_with_grass" parent="." instance=ExtResource("39_xsoi5")]
+
+[node name="gravel" parent="." instance=ExtResource("40_lcxkn")]

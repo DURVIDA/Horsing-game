@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://80cfwdhv54p7"
+path="res://.godot/imported/wood.obj-19dfc4b1429efef77a8dcb9532fff815.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wood.obj-19dfc4b1429efef77a8dcb9532fff815.mesh"]
+
+source_file="res://asset_packs/nature/block-bits/KayKit_BlockBits_1.0_FREE/Assets/obj/wood.obj"
+dest_files=["res://.godot/imported/wood.obj-19dfc4b1429efef77a8dcb9532fff815.mesh", "res://.godot/imported/wood.obj-19dfc4b1429efef77a8dcb9532fff815.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
