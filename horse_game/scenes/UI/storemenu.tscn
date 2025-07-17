@@ -1,0 +1,131 @@
+[gd_scene load_steps=5 format=3 uid="uid://pmmjka2teq62"]
+
+[ext_resource type="Script" path="res://scenes/UI/storemenu.gd" id="1_57udc"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="1_e08v5"]
+
+[sub_resource type="Animation" id="Animation_8o10j"]
+resource_name = "blur"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6e3ya"]
+_data = {
+"blur": SubResource("Animation_8o10j")
+}
+
+[node name="Storemenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57udc")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = 180.0
+offset_right = -150.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+tab_alignment = 1
+current_tab = 0
+
+[node name="Foods" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+metadata/_tab_index = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Foods"]
+layout_mode = 0
+offset_right = 995.0
+offset_bottom = 330.0
+theme_override_fonts/normal_font = ExtResource("1_e08v5")
+theme_override_font_sizes/normal_font_size = 30
+text = "Horsefood:			Cost: 100 gold
+Cowfood:				Cost: 100 gold
+Pigfood:					Cost: 100 gold"
+
+[node name="Horsefood" type="Button" parent="TabContainer/Foods"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
+
+[node name="Cowfood" type="Button" parent="TabContainer/Foods"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 87.0
+offset_right = 873.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
+
+[node name="Pigfood" type="Button" parent="TabContainer/Foods"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 171.0
+offset_right = 875.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
+
+[node name="Back" type="Button" parent="TabContainer/Foods"]
+layout_mode = 2
+offset_left = 893.0
+offset_top = 238.0
+offset_right = 996.0
+offset_bottom = 313.0
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="Animals" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+metadata/_tab_index = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Animals"]
+layout_mode = 0
+offset_right = 995.0
+offset_bottom = 330.0
+theme_override_fonts/normal_font = ExtResource("1_e08v5")
+text = "Horsefood:			Cost: 100 gold
+Cowfood:				Cost: 100 gold
+Pigfood:					Cost: 100 gold"
+
+[node name="Buildings" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+metadata/_tab_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Buildings"]
+layout_mode = 0
+offset_right = 995.0
+offset_bottom = 330.0
+theme_override_fonts/normal_font = ExtResource("1_e08v5")
+text = "Horsefood:			Cost: 100 gold
+Cowfood:				Cost: 100 gold
+Pigfood:					Cost: 100 gold"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6e3ya")
+}
+
+[connection signal="pressed" from="TabContainer/Foods/Horsefood" to="." method="_on_horsefood_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/Cowfood" to="." method="_on_cowfood_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/Pigfood" to="." method="_on_pigfood_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/Back" to="." method="_on_pigfood_2_pressed"]

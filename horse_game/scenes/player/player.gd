@@ -4,6 +4,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 
+@onready var storemenu: Control = $"../CanvasLayer/Storemenu"
 @onready var pivot: Node3D = $CameraOrigin
 @onready var camera: Camera3D = $CameraOrigin/Camera3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -33,8 +34,8 @@ func _physics_process(delta: float) -> void:
 	
 	#interacting
 	if Input.is_action_just_pressed("interact") and current_interactable:
-		if current_interactable.has_method("interact"):
-			current_interactable.interact(self)
+		if current_interactable.name == "ShopTrigger":
+			storemenu.open()
 	if Input.is_action_just_pressed("upgrade") and current_upgradeable:
 		if current_upgradeable.has_method("upgrade"):
 			current_upgradeable.upgrade(self)
@@ -73,6 +74,8 @@ func _physics_process(delta: float) -> void:
 func _on_interaction_area_area_entered(body: Node3D) -> void:
 	if body.has_method("interact"):
 		%InteractText.show()
+		if body.name == "ShopTrigger":
+			current_interactable = body
 		current_interactable = body
 		print(body)
 	if body.has_method("upgrade"):
@@ -100,12 +103,8 @@ func sell_food() -> void:
 	else:
 		print("❌ No food to sell.")
 		
-func open_store() -> void:
+func add_horsefood() -> void:
 	if Gamestate.money >= 100:
 		Gamestate.stored_food += 9 + Gamestate.food_level
 		Gamestate.money -= 100
-		pass
-func upgrade_store() -> void:
-	if Gamestate.money >= 20:
-		Gamestate.food_level +=1
-		Gamestate.money -= 20
+	pass
