@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnks4l0byosrf"]
+
+[ext_resource type="PackedScene" uid="uid://qn37cw6a24dm" path="res://scenes/buiding_blocks/plants/pine1.tscn" id="1_o2gw5"]
+[ext_resource type="PackedScene" uid="uid://bqcqkcf17iri" path="res://scenes/buiding_blocks/plants/pine2.tscn" id="2_epcb3"]
+[ext_resource type="PackedScene" uid="uid://d2rvl2kla2at7" path="res://scenes/buiding_blocks/plants/pine3.tscn" id="3_6xwfj"]
+[ext_resource type="PackedScene" uid="uid://d2messd7kiiav" path="res://scenes/buiding_blocks/plants/tree.tscn" id="4_6ob4d"]
+
+[node name="tiles_nature" type="Node3D"]
+
+[node name="pine1" parent="." instance=ExtResource("1_o2gw5")]
+
+[node name="pine2" parent="." instance=ExtResource("2_epcb3")]
+
+[node name="pine3" parent="." instance=ExtResource("3_6xwfj")]
+
+[node name="Tree" parent="." instance=ExtResource("4_6ob4d")]

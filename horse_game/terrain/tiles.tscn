@@ -1,5 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://di612mhvocgji"]
+[gd_scene load_steps=8 format=3 uid="uid://di612mhvocgji"]
 
+[ext_resource type="PackedScene" uid="uid://dlt04nx0f2ij" path="res://terrain/tiles wit collision/gravel_with_snow.tscn" id="3_sr8or"]
+[ext_resource type="PackedScene" uid="uid://bfafhnddkutj" path="res://terrain/tiles wit collision/water.tscn" id="4_7wa6f"]
+[ext_resource type="PackedScene" uid="uid://cevucx5rgyuyw" path="res://terrain/tiles wit collision/dirt.tscn" id="5_m4h2d"]
+[ext_resource type="PackedScene" uid="uid://bbgaf4mb66fs3" path="res://terrain/tiles wit collision/sand.tscn" id="6_q6u4h"]
+[ext_resource type="PackedScene" uid="uid://bpa45yvp0a70f" path="res://terrain/tiles wit collision/dirt_with_snow.tscn" id="7_7esou"]
 [ext_resource type="PackedScene" uid="uid://cufb8wxy4tpya" path="res://terrain/tiles wit collision/grassy_dirt_col.tscn" id="39_xsoi5"]
 [ext_resource type="PackedScene" uid="uid://cblayxde6ejqr" path="res://terrain/tiles wit collision/gravel_col.tscn" id="40_lcxkn"]
 
@@ -8,3 +13,13 @@
 [node name="dirt_with_grass" parent="." instance=ExtResource("39_xsoi5")]
 
 [node name="gravel" parent="." instance=ExtResource("40_lcxkn")]
+
+[node name="gravel_with_snow" parent="." instance=ExtResource("3_sr8or")]
+
+[node name="water" parent="." instance=ExtResource("4_7wa6f")]
+
+[node name="dirt" parent="." instance=ExtResource("5_m4h2d")]
+
+[node name="sand" parent="." instance=ExtResource("6_q6u4h")]
+
+[node name="dirt_with_snow" parent="." instance=ExtResource("7_7esou")]
