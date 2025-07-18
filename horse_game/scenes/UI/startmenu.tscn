@@ -26,11 +26,11 @@ theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="Resume" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
-text = "Continue"
+text = "Options"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -40,5 +40,5 @@ text = "Quit
 "
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

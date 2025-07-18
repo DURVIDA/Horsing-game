@@ -3536,6 +3536,7 @@ spring_arm = NodePath("../SpringArm3D/Springposition")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 stream = ExtResource("4_dgyku")
 autoplay = true
+bus = &"Music"
 area_mask = 7
 
 [connection signal="area_entered" from="Armature/InteractionArea" to="." method="_on_interaction_area_area_entered"]

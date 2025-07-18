@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3uadab77u3ad"]
+[gd_scene load_steps=10 format=3 uid="uid://c3uadab77u3ad"]
 
 [ext_resource type="PackedScene" uid="uid://cs45255q38myj" path="res://scenes/buiding_blocks/floor.tscn" id="1_f4q7a"]
 [ext_resource type="PackedScene" uid="uid://6curo0es7374" path="res://scenes/buiding_blocks/wall.tscn" id="2_x0yok"]
 [ext_resource type="PackedScene" uid="uid://csrndr13v6rko" path="res://scenes/buiding_blocks/stall.tscn" id="3_f0fmx"]
+[ext_resource type="PackedScene" uid="uid://82up85oqd883" path="res://scenes/furniture/furnitures/barnlamp.tscn" id="3_jupjb"]
 [ext_resource type="PackedScene" uid="uid://ccfobxkf74m1p" path="res://scenes/animals/horse.tscn" id="4_kkfne"]
 [ext_resource type="PackedScene" uid="uid://cdo00h002x02" path="res://scenes/buiding_blocks/food_place.tscn" id="5_p7wl0"]
 [ext_resource type="PackedScene" uid="uid://dcc2k62vjxydx" path="res://scenes/buiding_blocks/fencepost.tscn" id="6_76s77"]
@@ -52,10 +53,71 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 2, 0, -1, 0, -4.37114e-08, -20, 0
 
 [node name="lights" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.958, 0.395039, 173.904)
-visible = false
+
+[node name="lamps" type="Node3D" parent="lights"]
+
+[node name="barnlamp" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4, 5, 11.2)
+
+[node name="barnlamp2" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -4, 5, 11.2)
+
+[node name="barnlamp3" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 12, 5, 11.2)
+
+[node name="barnlamp4" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 12, 5, 18.8)
+
+[node name="barnlamp5" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 4, 5, 18.8)
+
+[node name="barnlamp6" parent="lights/lamps" instance=ExtResource("3_jupjb")]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, -4, 5, 18.8)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5.0002, 18.92)
+light_energy = 0.2
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5.0002, 11.1951)
+light_energy = 0.2
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98747, 5.0002, 11.1951)
+layers = 3
+light_energy = 0.2
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00691, 5.0002, 18.808)
+light_energy = 0.2
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9499, 5.0002, 18.92)
+light_energy = 0.2
+shadow_enabled = true
+omni_range = 25.0
+omni_attenuation = 0.4
+omni_shadow_mode = 0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9499, 5.0002, 11.2358)
+light_energy = 0.2
 shadow_enabled = true
 omni_range = 25.0
 omni_attenuation = 0.4

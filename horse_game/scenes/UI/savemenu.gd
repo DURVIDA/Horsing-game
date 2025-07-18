@@ -53,8 +53,8 @@ func _on_slot_3_pressed() -> void:
 func apply_loaded_data(data: Dictionary) -> void:
 	if data:
 		Gamestate.horsefood = data.get("horsefood", 0)
-		Gamestate.money = data.get("money", 0)
-		Gamestate.stored_horsefood = data.get("stored_horsefood", 10)
+		Gamestate.money = data.get("money", 100)
+		Gamestate.stored_horsefood = data.get("stored_horsefood", 0)
 		Gamestate.food_level = data.get("food_level" , 1)
 		var pos = data.get("player_position", null)
 		if pos:

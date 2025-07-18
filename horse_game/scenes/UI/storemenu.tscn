@@ -41,46 +41,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e08v5")
 metadata/_tab_index = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Foods"]
-layout_mode = 0
-offset_right = 995.0
-offset_bottom = 330.0
-theme_override_fonts/normal_font = ExtResource("1_e08v5")
-theme_override_font_sizes/normal_font_size = 30
-text = "Horsefood:			Cost: 100 gold
-Cowfood:				Cost: 100 gold
-Pigfood:					Cost: 100 gold"
-
-[node name="Horsefood" type="Button" parent="TabContainer/Foods"]
-layout_mode = 0
-offset_left = 478.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 82.0
-theme_override_fonts/font = ExtResource("1_e08v5")
-theme_override_font_sizes/font_size = 30
-text = "+10"
-
-[node name="Cowfood" type="Button" parent="TabContainer/Foods"]
-layout_mode = 0
-offset_left = 480.0
-offset_top = 87.0
-offset_right = 873.0
-offset_bottom = 162.0
-theme_override_fonts/font = ExtResource("1_e08v5")
-theme_override_font_sizes/font_size = 30
-text = "+10"
-
-[node name="Pigfood" type="Button" parent="TabContainer/Foods"]
-layout_mode = 0
-offset_left = 483.0
-offset_top = 171.0
-offset_right = 875.0
-offset_bottom = 246.0
-theme_override_fonts/font = ExtResource("1_e08v5")
-theme_override_font_sizes/font_size = 30
-text = "+10"
-
 [node name="Back" type="Button" parent="TabContainer/Foods"]
 layout_mode = 2
 offset_left = 893.0
@@ -90,6 +50,65 @@ offset_bottom = 313.0
 theme_override_fonts/font = ExtResource("1_e08v5")
 theme_override_font_sizes/font_size = 30
 text = "Back"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Foods"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 151.0
+offset_bottom = 238.0
+theme_override_constants/separation = 10
+
+[node name="Horsefoodlabel" type="Label" parent="TabContainer/Foods/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "Horsefood:"
+
+[node name="Cowfoodlabel" type="Label" parent="TabContainer/Foods/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "Cowfood:
+"
+
+[node name="Pigfoodlabel" type="Label" parent="TabContainer/Foods/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "Pigfood:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Foods"]
+layout_mode = 2
+offset_left = 246.0
+offset_top = -2.0
+offset_right = 346.0
+offset_bottom = 243.0
+theme_override_constants/separation = 10
+
+[node name="Horsefood" type="Button" parent="TabContainer/Foods/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.85098, 0.521569, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
+
+[node name="Cowfood" type="Button" parent="TabContainer/Foods/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.85098, 0.521569, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
+
+[node name="Pigfood" type="Button" parent="TabContainer/Foods/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.85098, 0.521569, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_e08v5")
+theme_override_font_sizes/font_size = 30
+text = "+10"
 
 [node name="Animals" type="TabBar" parent="TabContainer"]
 visible = false
@@ -126,7 +145,7 @@ libraries = {
 "": SubResource("AnimationLibrary_6e3ya")
 }
 
-[connection signal="pressed" from="TabContainer/Foods/Horsefood" to="." method="_on_horsefood_pressed"]
-[connection signal="pressed" from="TabContainer/Foods/Cowfood" to="." method="_on_cowfood_pressed"]
-[connection signal="pressed" from="TabContainer/Foods/Pigfood" to="." method="_on_pigfood_pressed"]
 [connection signal="pressed" from="TabContainer/Foods/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/VBoxContainer/Horsefood" to="." method="_on_horsefood_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/VBoxContainer/Cowfood" to="." method="_on_cowfood_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/VBoxContainer/Pigfood" to="." method="_on_pigfood_pressed"]
