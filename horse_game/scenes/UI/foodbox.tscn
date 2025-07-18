@@ -1,0 +1,173 @@
+[gd_scene load_steps=3 format=3 uid="uid://4lmh0oj66xaq"]
+
+[ext_resource type="Script" path="res://scenes/UI/foodbox.gd" id="1_mlawm"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="1_ywmjl"]
+
+[node name="Foodbox" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mlawm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 94.0
+offset_right = 1124.0
+offset_bottom = 636.0
+color = Color(0, 0.747786, 0.74984, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 299.0
+offset_top = 116.0
+offset_right = -339.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Horsefoodlabels" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Player" type="Label" parent="VBoxContainer/Horsefoodlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Player"
+
+[node name="Horsefood" type="Label" parent="VBoxContainer/Horsefoodlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Horsefood"
+
+[node name="Storage" type="Label" parent="VBoxContainer/Horsefoodlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Storage"
+
+[node name="Horsefoodbuttons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 550
+
+[node name="Playerhorse" type="Button" parent="VBoxContainer/Horsefoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Storagehorse" type="Button" parent="VBoxContainer/Horsefoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Cowfoodscale" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Player" type="Label" parent="VBoxContainer/Cowfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Player"
+
+[node name="Cowfood" type="Label" parent="VBoxContainer/Cowfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Cowfood"
+
+[node name="Storage" type="Label" parent="VBoxContainer/Cowfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Storage"
+
+[node name="Cowfoodbuttons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 550
+
+[node name="Playercow" type="Button" parent="VBoxContainer/Cowfoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Storagecow" type="Button" parent="VBoxContainer/Cowfoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Pigfoodscale" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Player" type="Label" parent="VBoxContainer/Pigfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Player"
+
+[node name="Pigfood" type="Label" parent="VBoxContainer/Pigfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Pigfood"
+
+[node name="Storage" type="Label" parent="VBoxContainer/Pigfoodscale"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "Storage"
+
+[node name="Pigfoodbuttons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 550
+
+[node name="Playerpig" type="Button" parent="VBoxContainer/Pigfoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Storagepig" type="Button" parent="VBoxContainer/Pigfoodbuttons"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 552.0
+offset_right = 1110.0
+offset_bottom = 627.0
+theme_override_fonts/font = ExtResource("1_ywmjl")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Horsefoodbuttons/Playerhorse" to="." method="_on_playerhorse_pressed"]
+[connection signal="pressed" from="VBoxContainer/Horsefoodbuttons/Storagehorse" to="." method="_on_storagehorse_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cowfoodbuttons/Playercow" to="." method="_on_playercow_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cowfoodbuttons/Storagecow" to="." method="_on_storagecow_pressed"]
+[connection signal="pressed" from="VBoxContainer/Pigfoodbuttons/Playerpig" to="." method="_on_playerpig_pressed"]
+[connection signal="pressed" from="VBoxContainer/Pigfoodbuttons/Storagepig" to="." method="_on_storagepig_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

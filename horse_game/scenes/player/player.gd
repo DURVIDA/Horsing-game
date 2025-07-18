@@ -4,6 +4,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 
+@onready var foodbox: Control = $"../CanvasLayer/Foodbox"
 @onready var storemenu: Control = $"../CanvasLayer/Storemenu"
 @onready var pivot: Node3D = $CameraOrigin
 @onready var camera: Camera3D = $CameraOrigin/Camera3D
@@ -12,17 +13,18 @@ const JUMP_VELOCITY = 4.5
 @onready var armature: Node3D = $Armature
 @export var sens := 0.5
 
-var current_upgradeable : Node = null
 var current_interactable: Node = null
 var speed = WALK_SPEED
 
 func _ready() -> void:
-	pass
+	if Gamestate.player_position:
+		global_position = Vector3(
+			Gamestate.player_position["x"],
+			Gamestate.player_position["y"],
+			Gamestate.player_position["z"]
+		)
 
 func _physics_process(delta: float) -> void:
-	
-	%Money2.text = str(Gamestate.money)
-	%Food2.text = str(Gamestate.food)
 	
 	var horizontal_velocity = velocity
 	horizontal_velocity.y = 0
@@ -36,9 +38,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and current_interactable:
 		if current_interactable.name == "ShopTrigger":
 			storemenu.open()
-	if Input.is_action_just_pressed("upgrade") and current_upgradeable:
-		if current_upgradeable.has_method("upgrade"):
-			current_upgradeable.upgrade(self)
+		elif current_interactable.name == "FoodStorage":
+			foodbox.open()
+		else:
+			current_interactable.interact(self)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -78,33 +81,20 @@ func _on_interaction_area_area_entered(body: Node3D) -> void:
 			current_interactable = body
 		current_interactable = body
 		print(body)
-	if body.has_method("upgrade"):
-		%InteractText2.show()
-		current_upgradeable = body
-		print(body)
 		
 func _on_interaction_area_area_exited(body: Node3D) -> void:
 	if body == current_interactable:
 		%InteractText.hide()
 		current_interactable = null
-	if body == current_upgradeable:
-		%InteractText2.hide()
-		current_upgradeable = null
 func add_food(amount: int) -> void:
-	Gamestate.food += amount
-	print("🍎 Food collected: ", Gamestate.food)
+	Gamestate.horsefood += amount
+	print("🍎 Food collected: ", Gamestate.horsefood)
 	
 func sell_food() -> void:
-	if Gamestate.food > 0:
+	if Gamestate.horsefood > 0:
 		var earnings = 10
 		Gamestate.money += earnings
-		Gamestate.food -=1
+		Gamestate.horsefood -=1
 		print("💰 Food sold! Money: ", Gamestate.money)
 	else:
 		print("❌ No food to sell.")
-		
-func add_horsefood() -> void:
-	if Gamestate.money >= 100:
-		Gamestate.stored_food += 9 + Gamestate.food_level
-		Gamestate.money -= 100
-	pass

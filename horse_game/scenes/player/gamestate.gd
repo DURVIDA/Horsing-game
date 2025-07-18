@@ -1,7 +1,8 @@
 extends Node
 
 var slot = 1
-var food = 0
-var stored_food = 10
-var money = 0
+var horsefood = 0
+var stored_horsefood = 0
+var money = 100
 var food_level = 1
+var player_position = null

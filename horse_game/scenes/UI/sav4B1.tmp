@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtsofhwl8ymys"]
+
+[ext_resource type="Script" path="res://scenes/UI/savemenu.gd" id="1_bj4q7"]
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="2_e3umi"]
+
+[node name="Savemenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bj4q7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 57.0
+offset_right = 1220.0
+offset_bottom = 518.0
+theme_override_constants/separation = 80
+
+[node name="Slot1Stuff" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Slot 1" type="Button" parent="VBoxContainer/Slot1Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 1"
+
+[node name="Stats" type="Label" parent="VBoxContainer/Slot1Stuff"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+
+[node name="Clear1" type="Button" parent="VBoxContainer/Slot1Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 20
+text = "Clear"
+
+[node name="Slot2Stuff" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Slot 2" type="Button" parent="VBoxContainer/Slot2Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 2"
+
+[node name="Stats2" type="Label" parent="VBoxContainer/Slot2Stuff"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+
+[node name="Clear2" type="Button" parent="VBoxContainer/Slot2Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 20
+text = "Clear
+"
+
+[node name="Slot3Stuff" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Slot 3" type="Button" parent="VBoxContainer/Slot3Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+text = "Save slot 3"
+
+[node name="Stats3" type="Label" parent="VBoxContainer/Slot3Stuff"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+
+[node name="Clear3" type="Button" parent="VBoxContainer/Slot3Stuff"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 20
+text = "Clear"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 586.0
+offset_top = 554.0
+offset_right = 668.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("2_e3umi")
+theme_override_font_sizes/font_size = 30
+text = "Back
+"
+
+[connection signal="pressed" from="VBoxContainer/Slot1Stuff/Slot 1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot1Stuff/Clear1" to="." method="_on_clear_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot2Stuff/Slot 2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot2Stuff/Clear2" to="." method="_on_clear_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot3Stuff/Slot 3" to="." method="_on_slot_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot3Stuff/Clear3" to="." method="_on_clear_3_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

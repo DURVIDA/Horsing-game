@@ -12,6 +12,7 @@ _data = {
 }
 
 [node name="Storemenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -128,4 +129,4 @@ libraries = {
 [connection signal="pressed" from="TabContainer/Foods/Horsefood" to="." method="_on_horsefood_pressed"]
 [connection signal="pressed" from="TabContainer/Foods/Cowfood" to="." method="_on_cowfood_pressed"]
 [connection signal="pressed" from="TabContainer/Foods/Pigfood" to="." method="_on_pigfood_pressed"]
-[connection signal="pressed" from="TabContainer/Foods/Back" to="." method="_on_pigfood_2_pressed"]
+[connection signal="pressed" from="TabContainer/Foods/Back" to="." method="_on_back_pressed"]

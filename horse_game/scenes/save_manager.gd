@@ -16,7 +16,7 @@ func save_game(data: Dictionary) -> void:
 	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
 	file.close()
-	print("✅ Game saved to slot %d" % Gamestate.slot, Gamestate.money, Gamestate.food, Gamestate.stored_food)
+	print("✅ Game saved to slot %d" % Gamestate.slot, Gamestate.money, Gamestate.horsefood, Gamestate.stored_horsefood)
 
 
 func load_game(slot: int) -> Dictionary:
@@ -27,8 +27,13 @@ func load_game(slot: int) -> Dictionary:
 	var file_path = "%s%d.json" % [SAVE_PATH, slot]
 	
 	if not FileAccess.file_exists(file_path):
-		print("❌ No save file in slot %d" % slot)
-		return {}
+		return {
+			"horsefood": 0,
+			"money": 100,
+			"stored_horsefood": 0,
+			"food_level": 1,
+			"player_position": { "x": 127, "y": 2, "z": 181 }
+		}
 
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	var content = file.get_as_text()

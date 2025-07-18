@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdo00h002x02"]
 
-[ext_resource type="Script" path="res://scenes/buiding_blocks/food_place.gd" id="1_e08b6"]
+[ext_resource type="Script" path="res://scenes/buiding_blocks/food_storage.gd" id="1_c0ck0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7bdji"]
 
@@ -19,15 +19,16 @@ mesh = SubResource("BoxMesh_7bdji")
 surface_material_override/0 = SubResource("StandardMaterial3D_o1xk4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_cfvs4")
 
-[node name="InteractionArea" type="Area3D" parent="."]
+[node name="FoodStorage" type="Area3D" parent="."]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_e08b6")
+script = ExtResource("1_c0ck0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FoodStorage"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0.5)
 shape = SubResource("BoxShape3D_8mwj3")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://d2ao018bm0eg7"]
+[gd_scene load_steps=17 format=4 uid="uid://d2ao018bm0eg7"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_acrtt"]
 [ext_resource type="Texture2D" uid="uid://4360mfhshfhe" path="res://scenes/player/untitled_Peasant_Man_diffuse.png" id="1_itxjg"]
@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://ghyaxk6d7sqp" path="res://audio/182_Country_Village.mp3" id="4_dgyku"]
 [ext_resource type="Script" path="res://scenes/player/spring_arm_3d.gd" id="4_m78yi"]
 [ext_resource type="Script" path="res://scenes/player/camera.gd" id="5_5lpma"]
-[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="7_mxmck"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5jphs"]
 resource_name = "Peasant_Man_02"
@@ -3181,8 +3180,6 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_78ey1"]
 radius = 0.3
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_abn25"]
-
 [node name="player" type="CharacterBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 collision_mask = 6
@@ -3534,88 +3531,6 @@ margin = 1.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.134082, 0)
 script = ExtResource("5_5lpma")
 spring_arm = NodePath("../SpringArm3D/Springposition")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="BoxContainer" type="BoxContainer" parent="UI"]
-offset_left = 515.0
-offset_top = 493.0
-offset_right = 875.0
-offset_bottom = 669.0
-
-[node name="InteractText" type="Label" parent="UI/BoxContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(0.768627, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 40
-text = "Press E to interact"
-
-[node name="InteractText2" type="Label" parent="UI/BoxContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(0.768627, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 40
-text = "Press R to upgrade"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
-offset_left = 44.0
-offset_top = 2.0
-offset_right = 146.0
-offset_bottom = 140.0
-
-[node name="Strings" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Money" type="Label" parent="UI/HBoxContainer/Strings"]
-material = SubResource("CanvasItemMaterial_abn25")
-layout_mode = 2
-theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 30
-text = "Money:"
-
-[node name="Food" type="Label" parent="UI/HBoxContainer/Strings"]
-material = SubResource("CanvasItemMaterial_abn25")
-layout_mode = 2
-theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 30
-text = "Food:"
-
-[node name="Values" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Money2" type="Label" parent="UI/HBoxContainer/Values"]
-unique_name_in_owner = true
-material = SubResource("CanvasItemMaterial_abn25")
-layout_mode = 2
-theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 30
-
-[node name="Food2" type="Label" parent="UI/HBoxContainer/Values"]
-unique_name_in_owner = true
-material = SubResource("CanvasItemMaterial_abn25")
-layout_mode = 2
-theme_override_colors/font_color = Color(0.554856, 0.451141, 0.0842565, 1)
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = ExtResource("7_mxmck")
-theme_override_font_sizes/font_size = 30
 
 [node name="music" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)

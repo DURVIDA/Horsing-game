@@ -2,6 +2,9 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var player: Player = $"../../player"
+@onready var interact_text: Label = %InteractText
+
+
 
 var slot = Gamestate.slot
 
@@ -10,12 +13,16 @@ func _ready() -> void:
 	animation_player.play("RESET")
 	hide()
 func resume() -> void:
+	if interact_text.visible == false and player.current_interactable != null:
+		interact_text.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().paused = false
 	animation_player.play_backwards("blur")
 	hide()
 	
 func pause() -> void:
+	if interact_text.visible == true:
+		interact_text.hide()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().paused = true
 	show()
@@ -37,9 +44,14 @@ func _on_restart_pressed() -> void:
 func _on_quit_pressed() -> void:
 	var current_data = {
 	"money": Gamestate.money,
-	"food": Gamestate.food,
-	"stored_food" : Gamestate.stored_food,
+	"food": Gamestate.horsefood,
+	"stored_food" : Gamestate.stored_horsefood,
 	"food_level" : Gamestate.food_level,
+	"player_position": {
+		"x": player.global_position.x,
+		"y": player.global_position.y,
+		"z": player.global_position.z
+	}
 }
 	SaveManager.save_game(current_data)
 	resume()
