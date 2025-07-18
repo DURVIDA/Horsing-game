@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxnan1hfi0yu1"]
+
+[ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="1_eay7w"]
+[ext_resource type="Script" path="res://scenes/UI/controlsmenu.gd" id="1_pyo10"]
+
+[node name="Controlsmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyo10")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 73.0
+offset_right = 942.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 191.0
+offset_top = 135.0
+offset_right = -185.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_eay7w")
+theme_override_font_sizes/normal_font_size = 30
+text = "Move: WASD
+Interact: E
+Sprint: Shift (Hold)
+Pause: Esc
+"
+
+[node name="ColorRect" type="ColorRect" parent="RichTextLabel"]
+z_index = -5
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.168627, 0.254902, 1)
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 536.0
+offset_right = 1107.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

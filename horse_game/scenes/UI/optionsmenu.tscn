@@ -82,5 +82,9 @@ theme_override_fonts/font = ExtResource("1_72wx1")
 theme_override_font_sizes/font_size = 20
 text = "Back"
 
+[connection signal="pressed" from="HBoxContainer/Labels/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="HBoxContainer/Adjusts/Bindings" to="." method="_on_bindings_pressed"]
 [connection signal="value_changed" from="HBoxContainer/Adjusts/Volumeslider" to="." method="_on_volumeslider_value_changed"]
+[connection signal="toggled" from="HBoxContainer/Adjusts/Musiccheck" to="." method="_on_musiccheck_toggled"]
+[connection signal="value_changed" from="HBoxContainer/Adjusts/Mousesensslider" to="." method="_on_mousesensslider_value_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
