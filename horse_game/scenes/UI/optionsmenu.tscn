@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqx88verdtm48"]
+[gd_scene load_steps=4 format=3 uid="uid://dqx88verdtm48"]
 
 [ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="1_72wx1"]
 [ext_resource type="Script" path="res://scenes/UI/optionsmenu.gd" id="1_cailc"]
+[ext_resource type="Texture2D" uid="uid://ndiy074gm0w" path="res://assets/farm_wallpaper.jpg" id="3_bq1fa"]
 
 [node name="Optionsmenu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cailc")
+
+[node name="FarmWallpaper" type="Sprite2D" parent="."]
+position = Vector2(642, 352)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_bq1fa")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0

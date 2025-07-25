@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4x4hb41ykusj"]
+[gd_scene load_steps=4 format=3 uid="uid://4x4hb41ykusj"]
 
 [ext_resource type="Script" path="res://scenes/UI/startmenu.gd" id="1_u7is3"]
 [ext_resource type="FontFile" uid="uid://bs0f53s1deni1" path="res://asset_packs/ui/shooting star font/Shooting Star.ttf" id="2_rjmn2"]
+[ext_resource type="Texture2D" uid="uid://ndiy074gm0w" path="res://assets/farm_wallpaper.jpg" id="3_20nte"]
 
 [node name="Startmenu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u7is3")
+
+[node name="FarmWallpaper" type="Sprite2D" parent="."]
+position = Vector2(642, 352)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_20nte")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -32,6 +38,11 @@ theme_override_fonts/font = ExtResource("2_rjmn2")
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_rjmn2")
@@ -41,4 +52,5 @@ text = "Quit
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

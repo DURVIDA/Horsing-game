@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://08o4uxxq7iit"]
+
+[ext_resource type="Script" path="res://scenes/UI/creditsmenu.gd" id="1_qpn8i"]
+[ext_resource type="Texture2D" uid="uid://ndiy074gm0w" path="res://assets/farm_wallpaper.jpg" id="2_q4p8l"]
+
+[node name="Creditsmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qpn8i")
+
+[node name="FarmWallpaper" type="Sprite2D" parent="."]
+position = Vector2(642, 352)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_q4p8l")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "Wallpaper Photo by Federico Respini on Unsplash"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 617.0
+offset_right = 1259.0
+offset_bottom = 693.0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

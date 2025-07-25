@@ -34,21 +34,24 @@ func _on_slot_1_pressed() -> void:
 	var data = SaveManager.load_game(1)
 	apply_loaded_data(data)
 	Gamestate.slot = 1
-	get_tree().change_scene_to_file("res://scenes/world.tscn")
+	if %Load.visible != true:
+		%Load.show()
 
 func _on_slot_2_pressed() -> void:
 	Gamestate.slot = 2
 	var data = SaveManager.load_game(2)
 	apply_loaded_data(data)
 	Gamestate.slot = 2
-	get_tree().change_scene_to_file("res://scenes/world.tscn")
+	if %Load.visible != true:
+		%Load.show()
 
 func _on_slot_3_pressed() -> void:
 	Gamestate.slot = 3
 	var data = SaveManager.load_game(3)
 	apply_loaded_data(data)
 	Gamestate.slot = 3
-	get_tree().change_scene_to_file("res://scenes/world.tscn")
+	if %Load.visible != true:
+		%Load.show()
 
 func apply_loaded_data(data: Dictionary) -> void:
 	if data:
@@ -90,3 +93,7 @@ func _on_clear_2_pressed() -> void:
 
 func _on_clear_3_pressed() -> void:
 	clear_save_slot(3)
+
+
+func _on_load_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/world.tscn")
