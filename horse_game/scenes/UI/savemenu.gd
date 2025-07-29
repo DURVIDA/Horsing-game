@@ -4,6 +4,7 @@ extends Control
 @onready var slot_2: Button = $"VBoxContainer/Slot2Stuff/Slot 2"
 @onready var slot_3: Button = $"VBoxContainer/Slot3Stuff/Slot 3"
 @onready var stats: RichTextLabel = %Stats
+@onready var loaded: Label = %Loaded
 
 var slot1toggled := false
 var slot2toggled := false
@@ -76,6 +77,9 @@ func _on_load_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/world.tscn")
 
 func _on_slot_1_button_down() -> void:
+	%Loaded.hide()
+	%Loaded.text = "Slot 1 loaded"
+	%Loaded.show()
 	if %Stats.visible != true:
 		%Stats.show()
 	update_slot_label(1,stats)
@@ -88,6 +92,9 @@ func _on_slot_1_button_down() -> void:
 
 
 func _on_slot_2_button_down() -> void:
+	%Loaded.hide()
+	%Loaded.text = "Slot 2 loaded"
+	%Loaded.show()
 	if %Stats.visible != true:
 		%Stats.show()
 	update_slot_label(2,stats)
@@ -100,6 +107,9 @@ func _on_slot_2_button_down() -> void:
 
 
 func _on_slot_3_button_down() -> void:
+	%Loaded.hide()
+	%Loaded.text = "Slot 3 loaded"
+	%Loaded.show()
 	if %Stats.visible != true:
 		%Stats.show()
 	update_slot_label(3,stats)

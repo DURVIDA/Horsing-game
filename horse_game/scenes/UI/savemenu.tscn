@@ -106,7 +106,17 @@ offset_left = 751.0
 offset_top = 111.0
 offset_right = 1279.0
 offset_bottom = 516.0
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="Loaded" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 895.0
+offset_top = 15.0
+offset_right = 1164.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 30
 
 [connection signal="button_down" from="VBoxContainer/Slot1Stuff/Slot 1" to="." method="_on_slot_1_button_down"]
 [connection signal="pressed" from="VBoxContainer/Slot1Stuff/Clear1" to="." method="_on_clear_1_pressed"]
