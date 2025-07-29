@@ -3,22 +3,24 @@ extends Control
 @onready var slot_1: Button = $"VBoxContainer/Slot1Stuff/Slot 1"
 @onready var slot_2: Button = $"VBoxContainer/Slot2Stuff/Slot 2"
 @onready var slot_3: Button = $"VBoxContainer/Slot3Stuff/Slot 3"
-@onready var stats: Label = %Stats
-@onready var stats_2: Label = %Stats2
-@onready var stats_3: Label = %Stats3
+@onready var stats: RichTextLabel = %Stats
+
+var slot1toggled := false
+var slot2toggled := false
+var slot3toggled := false
 
 func _ready() -> void:
-	update_slot_labels()
-
-func update_slot_labels() -> void:
-	update_slot_label(1, stats)
-	update_slot_label(2, stats_2)
-	update_slot_label(3, stats_3)
-
-func update_slot_label(slot: int, label: Label) -> void:
+	pass
+	
+func update_slot_label(slot: int, label: RichTextLabel) -> void:
 	var data = SaveManager.load_game(slot)
 	if data:
-		label.text = "💰%d | 🍎%d | 📦%d | Lv.%d" % [
+		label.text = "		Slot %d
+		💰%d
+		🍎%d
+		📦%d
+		Lv.%d" % [
+			slot,
 			data.get("money", 0),
 			data.get("horsefood", 0),
 			data.get("stored_horsefood", 0),
@@ -27,31 +29,6 @@ func update_slot_label(slot: int, label: Label) -> void:
 		]
 	else:
 		label.text = "Slot %d\n(Empty)" % slot
-	
-
-func _on_slot_1_pressed() -> void:
-	Gamestate.slot = 1
-	var data = SaveManager.load_game(1)
-	apply_loaded_data(data)
-	Gamestate.slot = 1
-	if %Load.visible != true:
-		%Load.show()
-
-func _on_slot_2_pressed() -> void:
-	Gamestate.slot = 2
-	var data = SaveManager.load_game(2)
-	apply_loaded_data(data)
-	Gamestate.slot = 2
-	if %Load.visible != true:
-		%Load.show()
-
-func _on_slot_3_pressed() -> void:
-	Gamestate.slot = 3
-	var data = SaveManager.load_game(3)
-	apply_loaded_data(data)
-	Gamestate.slot = 3
-	if %Load.visible != true:
-		%Load.show()
 
 func apply_loaded_data(data: Dictionary) -> void:
 	if data:
@@ -81,7 +58,7 @@ func clear_save_slot(slot: int) -> void:
 	else:
 		print("⚠️ No save file found in slot %d." % slot)
 	
-	update_slot_labels()  # Refresh UI after clearing
+	update_slot_label(slot,stats)  # Refresh UI after clearing
 
 func _on_clear_1_pressed() -> void:
 	clear_save_slot(1)
@@ -97,3 +74,38 @@ func _on_clear_3_pressed() -> void:
 
 func _on_load_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/world.tscn")
+
+func _on_slot_1_button_down() -> void:
+	if %Stats.visible != true:
+		%Stats.show()
+	update_slot_label(1,stats)
+	Gamestate.slot = 1
+	var data = SaveManager.load_game(1)
+	apply_loaded_data(data)
+	Gamestate.slot = 1
+	if %Load.visible != true:
+		%Load.show()
+
+
+func _on_slot_2_button_down() -> void:
+	if %Stats.visible != true:
+		%Stats.show()
+	update_slot_label(2,stats)
+	Gamestate.slot = 2
+	var data = SaveManager.load_game(2)
+	apply_loaded_data(data)
+	Gamestate.slot = 2
+	if %Load.visible != true:
+		%Load.show()
+
+
+func _on_slot_3_button_down() -> void:
+	if %Stats.visible != true:
+		%Stats.show()
+	update_slot_label(3,stats)
+	Gamestate.slot = 3
+	var data = SaveManager.load_game(3)
+	apply_loaded_data(data)
+	Gamestate.slot = 3
+	if %Load.visible != true:
+		%Load.show()
