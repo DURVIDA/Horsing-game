@@ -4,3 +4,4 @@ extends CharacterBody3D
 
 func _process(_delta: float) -> void:
 	animation_player.play("idle")
+	

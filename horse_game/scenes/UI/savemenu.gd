@@ -20,12 +20,14 @@ func update_slot_label(slot: int, label: RichTextLabel) -> void:
 		💰%d
 		🍎%d
 		📦%d
-		Lv.%d" % [
+		Lv.%d
+		day%d" % [
 			slot,
-			data.get("money", 0),
-			data.get("horsefood", 0),
-			data.get("stored_horsefood", 0),
-			data.get("food_level", 1)
+			data.get("money", 100),
+			data.get("horsefood", 100),
+			data.get("stored_horsefood", 100),
+			data.get("food_level", 1),
+			data.get("day", 1)
 			
 		]
 	else:
@@ -33,10 +35,11 @@ func update_slot_label(slot: int, label: RichTextLabel) -> void:
 
 func apply_loaded_data(data: Dictionary) -> void:
 	if data:
-		Gamestate.horsefood = data.get("horsefood", 0)
+		Gamestate.horsefood = data.get("horsefood", 100)
 		Gamestate.money = data.get("money", 100)
-		Gamestate.stored_horsefood = data.get("stored_horsefood", 0)
+		Gamestate.stored_horsefood = data.get("stored_horsefood", 100)
 		Gamestate.food_level = data.get("food_level" , 1)
+		Gamestate.day = data.get("day", 1)
 		var pos = data.get("player_position", null)
 		if pos:
 			Gamestate.player_position = pos

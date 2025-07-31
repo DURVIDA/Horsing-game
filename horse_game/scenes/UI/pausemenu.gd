@@ -32,8 +32,6 @@ func pause() -> void:
 func testPause() -> void:
 	if Input.is_action_just_pressed("pause") and !get_tree().paused:
 		pause()
-	elif Input.is_action_just_pressed("pause") and get_tree().paused:
-		resume()
 func _on_resume_pressed() -> void:
 	resume()
 	
@@ -51,7 +49,8 @@ func _on_quit_pressed() -> void:
 		"x": player.global_position.x,
 		"y": player.global_position.y,
 		"z": player.global_position.z
-	}
+	},
+	"day" : Gamestate.day
 }
 	SaveManager.save_game(current_data)
 	resume()

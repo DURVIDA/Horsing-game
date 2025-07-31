@@ -2,11 +2,14 @@ extends Control
 
 @onready var player: Player = $"../../player"
 @onready var interact_text: Label = %InteractText
+@onready var pausemenu: Control = $"../Pausemenu"
 
 @export var opened := false
 func _ready():
 	hide()  # Hide when game starts
-
+	
+func _process(_delta: float) -> void:
+	pass
 func open():
 	show()
 	if interact_text.visible == true:

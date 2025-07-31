@@ -28,11 +28,12 @@ func load_game(slot: int) -> Dictionary:
 	
 	if not FileAccess.file_exists(file_path):
 		return {
-			"horsefood": 0,
+			"horsefood": 100,
 			"money": 100,
-			"stored_horsefood": 0,
+			"stored_horsefood": 100,
 			"food_level": 1,
-			"player_position": { "x": 127, "y": 2, "z": 181 }
+			"player_position": { "x": 127, "y": 2, "z": 181 },
+			"day" : 1
 		}
 
 	var file = FileAccess.open(file_path, FileAccess.READ)
